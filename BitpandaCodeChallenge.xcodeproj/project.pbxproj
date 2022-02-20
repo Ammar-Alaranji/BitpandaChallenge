@@ -8,15 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		439B011227C12001001D490A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B011127C12001001D490A /* AppDelegate.swift */; };
-		439B011427C12001001D490A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B011327C12001001D490A /* SceneDelegate.swift */; };
-		439B011627C12001001D490A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B011527C12001001D490A /* ViewController.swift */; };
-		439B011927C12001001D490A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439B011727C12001001D490A /* Main.storyboard */; };
-		439B011C27C12001001D490A /* BitpandaCodeChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 439B011A27C12001001D490A /* BitpandaCodeChallenge.xcdatamodeld */; };
 		439B011E27C12006001D490A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439B011D27C12006001D490A /* Assets.xcassets */; };
 		439B012127C12006001D490A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439B011F27C12006001D490A /* LaunchScreen.storyboard */; };
 		439B012C27C12007001D490A /* BitpandaCodeChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B012B27C12007001D490A /* BitpandaCodeChallengeTests.swift */; };
 		439B013627C12007001D490A /* BitpandaCodeChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B013527C12007001D490A /* BitpandaCodeChallengeUITests.swift */; };
 		439B013827C12007001D490A /* BitpandaCodeChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B013727C12007001D490A /* BitpandaCodeChallengeUITestsLaunchTests.swift */; };
+		439B014F27C1234C001D490A /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B014E27C1234C001D490A /* Asset.swift */; };
+		439B015327C13271001D490A /* AssetsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B015227C13270001D490A /* AssetsRepository.swift */; };
+		439B015627C1355A001D490A /* BitpandaAssetsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B015527C1355A001D490A /* BitpandaAssetsRepository.swift */; };
+		439B015927C13C86001D490A /* Masterdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 439B015827C13C86001D490A /* Masterdata.json */; };
+		439B015F27C1B8E5001D490A /* RemoteAssetsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B015E27C1B8E5001D490A /* RemoteAssetsAPI.swift */; };
+		439B016227C1B987001D490A /* FakeRemoteAssetsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B016127C1B987001D490A /* FakeRemoteAssetsAPI.swift */; };
+		439B016427C1BECB001D490A /* BitpandaRemoteAssetsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B016327C1BECB001D490A /* BitpandaRemoteAssetsAPI.swift */; };
+		439B016727C1C094001D490A /* BitpandaAppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B016627C1C094001D490A /* BitpandaAppDependencyContainer.swift */; };
+		439B016927C1C41B001D490A /* BitpandaKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B016827C1C41B001D490A /* BitpandaKitError.swift */; };
+		439B016B27C1C627001D490A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439B016A27C1C626001D490A /* Main.storyboard */; };
+		439B016D27C1C658001D490A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B016C27C1C658001D490A /* ViewController.swift */; };
+		63F5A190997C5645E6E5C03F /* Pods_BitpandaCodeChallenge_BitpandaCodeChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94346039C5C2A3855B68DFF9 /* Pods_BitpandaCodeChallenge_BitpandaCodeChallengeUITests.framework */; };
+		695FF92A5ADE01567774A802 /* Pods_BitpandaCodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD800F2F0306276A52DA89D7 /* Pods_BitpandaCodeChallenge.framework */; };
+		90C269850B65B4AC3CF3AAA8 /* Pods_BitpandaCodeChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00256AC69F1689086314FBFD /* Pods_BitpandaCodeChallengeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00256AC69F1689086314FBFD /* Pods_BitpandaCodeChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitpandaCodeChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		206791F017D5DEDD4EE85980 /* Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests/Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		439B010E27C12001001D490A /* BitpandaCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitpandaCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439B011127C12001001D490A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		439B011327C12001001D490A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		439B011527C12001001D490A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		439B011827C12001001D490A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		439B011B27C12001001D490A /* BitpandaCodeChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BitpandaCodeChallenge.xcdatamodel; sourceTree = "<group>"; };
 		439B011D27C12006001D490A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		439B012027C12006001D490A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		439B012227C12006001D490A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +59,24 @@
 		439B013127C12007001D490A /* BitpandaCodeChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitpandaCodeChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		439B013527C12007001D490A /* BitpandaCodeChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitpandaCodeChallengeUITests.swift; sourceTree = "<group>"; };
 		439B013727C12007001D490A /* BitpandaCodeChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitpandaCodeChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		439B014E27C1234C001D490A /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		439B015227C13270001D490A /* AssetsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsRepository.swift; sourceTree = "<group>"; };
+		439B015527C1355A001D490A /* BitpandaAssetsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitpandaAssetsRepository.swift; sourceTree = "<group>"; };
+		439B015827C13C86001D490A /* Masterdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Masterdata.json; sourceTree = "<group>"; };
+		439B015E27C1B8E5001D490A /* RemoteAssetsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAssetsAPI.swift; sourceTree = "<group>"; };
+		439B016127C1B987001D490A /* FakeRemoteAssetsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeRemoteAssetsAPI.swift; sourceTree = "<group>"; };
+		439B016327C1BECB001D490A /* BitpandaRemoteAssetsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitpandaRemoteAssetsAPI.swift; sourceTree = "<group>"; };
+		439B016627C1C094001D490A /* BitpandaAppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitpandaAppDependencyContainer.swift; sourceTree = "<group>"; };
+		439B016827C1C41B001D490A /* BitpandaKitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitpandaKitError.swift; sourceTree = "<group>"; };
+		439B016A27C1C626001D490A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		439B016C27C1C658001D490A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		60E031271D5CC8E4A18A8840 /* Pods-BitpandaCodeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitpandaCodeChallenge.debug.xcconfig"; path = "Target Support Files/Pods-BitpandaCodeChallenge/Pods-BitpandaCodeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		94346039C5C2A3855B68DFF9 /* Pods_BitpandaCodeChallenge_BitpandaCodeChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitpandaCodeChallenge_BitpandaCodeChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F168FE567C23AE17D819640 /* Pods-BitpandaCodeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitpandaCodeChallenge.release.xcconfig"; path = "Target Support Files/Pods-BitpandaCodeChallenge/Pods-BitpandaCodeChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		AC3EE842565FBF70F37D6922 /* Pods-BitpandaCodeChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitpandaCodeChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-BitpandaCodeChallengeTests/Pods-BitpandaCodeChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		BD800F2F0306276A52DA89D7 /* Pods_BitpandaCodeChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitpandaCodeChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE0574821D6174BBD511D38 /* Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests/Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ECCF71FC21757C1458A81474 /* Pods-BitpandaCodeChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitpandaCodeChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-BitpandaCodeChallengeTests/Pods-BitpandaCodeChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				695FF92A5ADE01567774A802 /* Pods_BitpandaCodeChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90C269850B65B4AC3CF3AAA8 /* Pods_BitpandaCodeChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63F5A190997C5645E6E5C03F /* Pods_BitpandaCodeChallenge_BitpandaCodeChallengeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +114,8 @@
 				439B012A27C12007001D490A /* BitpandaCodeChallengeTests */,
 				439B013427C12007001D490A /* BitpandaCodeChallengeUITests */,
 				439B010F27C12001001D490A /* Products */,
+				FFAFE387CF6F8D1EF88BE7BC /* Pods */,
+				456DBEBA57C31ACEE94B911B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +132,10 @@
 		439B011027C12001001D490A /* BitpandaCodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				439B011127C12001001D490A /* AppDelegate.swift */,
-				439B011327C12001001D490A /* SceneDelegate.swift */,
-				439B011527C12001001D490A /* ViewController.swift */,
-				439B011727C12001001D490A /* Main.storyboard */,
-				439B011D27C12006001D490A /* Assets.xcassets */,
-				439B011F27C12006001D490A /* LaunchScreen.storyboard */,
-				439B012227C12006001D490A /* Info.plist */,
-				439B011A27C12001001D490A /* BitpandaCodeChallenge.xcdatamodeld */,
+				439B014527C120F1001D490A /* Application */,
+				439B014927C1220A001D490A /* Presentation */,
+				439B014427C1201A001D490A /* BitpandaKit */,
+				439B014627C12131001D490A /* Resources */,
 			);
 			path = BitpandaCodeChallenge;
 			sourceTree = "<group>";
@@ -130,6 +157,136 @@
 			path = BitpandaCodeChallengeUITests;
 			sourceTree = "<group>";
 		};
+		439B014427C1201A001D490A /* BitpandaKit */ = {
+			isa = PBXGroup;
+			children = (
+				439B016527C1BF39001D490A /* UILayer */,
+				439B014A27C12250001D490A /* DataLayer */,
+			);
+			path = BitpandaKit;
+			sourceTree = "<group>";
+		};
+		439B014527C120F1001D490A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				439B011127C12001001D490A /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		439B014627C12131001D490A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				439B014B27C12292001D490A /* Data Resource */,
+				439B011F27C12006001D490A /* LaunchScreen.storyboard */,
+				439B011D27C12006001D490A /* Assets.xcassets */,
+				439B012227C12006001D490A /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		439B014827C121B6001D490A /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		439B014927C1220A001D490A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				439B016627C1C094001D490A /* BitpandaAppDependencyContainer.swift */,
+				439B016A27C1C626001D490A /* Main.storyboard */,
+				439B016C27C1C658001D490A /* ViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		439B014A27C12250001D490A /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				439B015127C1324E001D490A /* Repositories */,
+				439B015C27C1B2F2001D490A /* Models */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		439B014B27C12292001D490A /* Data Resource */ = {
+			isa = PBXGroup;
+			children = (
+				439B015827C13C86001D490A /* Masterdata.json */,
+			);
+			path = "Data Resource";
+			sourceTree = "<group>";
+		};
+		439B015127C1324E001D490A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				439B015227C13270001D490A /* AssetsRepository.swift */,
+				439B015527C1355A001D490A /* BitpandaAssetsRepository.swift */,
+				439B014827C121B6001D490A /* Persistence */,
+				439B015D27C1B8B4001D490A /* Remote */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		439B015C27C1B2F2001D490A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				439B014E27C1234C001D490A /* Asset.swift */,
+				439B016827C1C41B001D490A /* BitpandaKitError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		439B015D27C1B8B4001D490A /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				439B015E27C1B8E5001D490A /* RemoteAssetsAPI.swift */,
+				439B016027C1B919001D490A /* Implementation */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		439B016027C1B919001D490A /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				439B016127C1B987001D490A /* FakeRemoteAssetsAPI.swift */,
+				439B016327C1BECB001D490A /* BitpandaRemoteAssetsAPI.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		439B016527C1BF39001D490A /* UILayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UILayer;
+			sourceTree = "<group>";
+		};
+		456DBEBA57C31ACEE94B911B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD800F2F0306276A52DA89D7 /* Pods_BitpandaCodeChallenge.framework */,
+				94346039C5C2A3855B68DFF9 /* Pods_BitpandaCodeChallenge_BitpandaCodeChallengeUITests.framework */,
+				00256AC69F1689086314FBFD /* Pods_BitpandaCodeChallengeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFAFE387CF6F8D1EF88BE7BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60E031271D5CC8E4A18A8840 /* Pods-BitpandaCodeChallenge.debug.xcconfig */,
+				9F168FE567C23AE17D819640 /* Pods-BitpandaCodeChallenge.release.xcconfig */,
+				DFE0574821D6174BBD511D38 /* Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests.debug.xcconfig */,
+				206791F017D5DEDD4EE85980 /* Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests.release.xcconfig */,
+				ECCF71FC21757C1458A81474 /* Pods-BitpandaCodeChallengeTests.debug.xcconfig */,
+				AC3EE842565FBF70F37D6922 /* Pods-BitpandaCodeChallengeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +294,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 439B013B27C12007001D490A /* Build configuration list for PBXNativeTarget "BitpandaCodeChallenge" */;
 			buildPhases = (
+				28488294CCFA671190AF0F12 /* [CP] Check Pods Manifest.lock */,
 				439B010A27C12001001D490A /* Sources */,
 				439B010B27C12001001D490A /* Frameworks */,
 				439B010C27C12001001D490A /* Resources */,
+				D3816584BD2D78ACFB14539E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +313,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 439B013E27C12007001D490A /* Build configuration list for PBXNativeTarget "BitpandaCodeChallengeTests" */;
 			buildPhases = (
+				AF3ED0DD6CAF5AAE238AE7AA /* [CP] Check Pods Manifest.lock */,
 				439B012327C12007001D490A /* Sources */,
 				439B012427C12007001D490A /* Frameworks */,
 				439B012527C12007001D490A /* Resources */,
@@ -172,9 +332,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 439B014127C12007001D490A /* Build configuration list for PBXNativeTarget "BitpandaCodeChallengeUITests" */;
 			buildPhases = (
+				F88DA200A1956866CE794267 /* [CP] Check Pods Manifest.lock */,
 				439B012D27C12007001D490A /* Sources */,
 				439B012E27C12007001D490A /* Frameworks */,
 				439B012F27C12007001D490A /* Resources */,
+				AECAB1B86144878492D83B8B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,7 +398,8 @@
 			files = (
 				439B012127C12006001D490A /* LaunchScreen.storyboard in Resources */,
 				439B011E27C12006001D490A /* Assets.xcassets in Resources */,
-				439B011927C12001001D490A /* Main.storyboard in Resources */,
+				439B015927C13C86001D490A /* Masterdata.json in Resources */,
+				439B016B27C1C627001D490A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,15 +419,124 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28488294CCFA671190AF0F12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitpandaCodeChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AECAB1B86144878492D83B8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests/Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests/Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests/Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF3ED0DD6CAF5AAE238AE7AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitpandaCodeChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3816584BD2D78ACFB14539E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BitpandaCodeChallenge/Pods-BitpandaCodeChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BitpandaCodeChallenge/Pods-BitpandaCodeChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BitpandaCodeChallenge/Pods-BitpandaCodeChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F88DA200A1956866CE794267 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		439B010A27C12001001D490A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				439B011627C12001001D490A /* ViewController.swift in Sources */,
+				439B016D27C1C658001D490A /* ViewController.swift in Sources */,
 				439B011227C12001001D490A /* AppDelegate.swift in Sources */,
-				439B011427C12001001D490A /* SceneDelegate.swift in Sources */,
-				439B011C27C12001001D490A /* BitpandaCodeChallenge.xcdatamodeld in Sources */,
+				439B014F27C1234C001D490A /* Asset.swift in Sources */,
+				439B016227C1B987001D490A /* FakeRemoteAssetsAPI.swift in Sources */,
+				439B016427C1BECB001D490A /* BitpandaRemoteAssetsAPI.swift in Sources */,
+				439B015627C1355A001D490A /* BitpandaAssetsRepository.swift in Sources */,
+				439B016727C1C094001D490A /* BitpandaAppDependencyContainer.swift in Sources */,
+				439B016927C1C41B001D490A /* BitpandaKitError.swift in Sources */,
+				439B015F27C1B8E5001D490A /* RemoteAssetsAPI.swift in Sources */,
+				439B015327C13271001D490A /* AssetsRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +573,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		439B011727C12001001D490A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				439B011827C12001001D490A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		439B011F27C12006001D490A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -371,7 +635,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -426,7 +690,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -438,14 +702,16 @@
 		};
 		439B013C27C12007001D490A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60E031271D5CC8E4A18A8840 /* Pods-BitpandaCodeChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETS_SESSION_DATASTORE_LOCALFILE = USER_SESSION_DATASTORE_FILEBASED;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = EE6W939978;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BitpandaCodeChallenge/Info.plist;
+				INFOPLIST_FILE = BitpandaCodeChallenge/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -458,6 +724,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.BitpandaCodeChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG ASSETS_SESSION_DATASTORE_LOCALFILE";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,14 +733,16 @@
 		};
 		439B013D27C12007001D490A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F168FE567C23AE17D819640 /* Pods-BitpandaCodeChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETS_SESSION_DATASTORE_LOCALFILE = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = EE6W939978;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BitpandaCodeChallenge/Info.plist;
+				INFOPLIST_FILE = BitpandaCodeChallenge/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -486,6 +755,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.BitpandaCodeChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = RELEASE;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -494,6 +764,7 @@
 		};
 		439B013F27C12007001D490A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECCF71FC21757C1458A81474 /* Pods-BitpandaCodeChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +790,7 @@
 		};
 		439B014027C12007001D490A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC3EE842565FBF70F37D6922 /* Pods-BitpandaCodeChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -544,6 +816,7 @@
 		};
 		439B014227C12007001D490A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFE0574821D6174BBD511D38 /* Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -567,6 +840,7 @@
 		};
 		439B014327C12007001D490A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 206791F017D5DEDD4EE85980 /* Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -628,19 +902,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		439B011A27C12001001D490A /* BitpandaCodeChallenge.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				439B011B27C12001001D490A /* BitpandaCodeChallenge.xcdatamodel */,
-			);
-			currentVersion = 439B011B27C12001001D490A /* BitpandaCodeChallenge.xcdatamodel */;
-			path = BitpandaCodeChallenge.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 439B010627C12001001D490A /* Project object */;
 }
