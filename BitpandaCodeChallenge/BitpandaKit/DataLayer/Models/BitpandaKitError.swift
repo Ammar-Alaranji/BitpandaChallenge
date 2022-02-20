@@ -9,8 +9,8 @@ import Foundation
 
 // In a real app, errors would be modeled here.
 enum BitpandaKitError: Error {
-  
-  case remoteAPINotAvailalbe
+    
+    case remoteAPINotAvailalbe
     
     var description: String {
         switch self {

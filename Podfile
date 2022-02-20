@@ -5,6 +5,8 @@ target 'BitpandaCodeChallenge' do
 
   # Pods for BitpandaCodeChallenge
   pod 'PromisesSwift'
+  pod 'Kingfisher'
+  pod 'SVGKit'
 
   target 'BitpandaCodeChallengeTests' do
     inherit! :search_paths

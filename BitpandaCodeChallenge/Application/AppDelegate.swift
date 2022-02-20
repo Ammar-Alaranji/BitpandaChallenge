@@ -7,20 +7,19 @@
 
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    let injectionContainer = AssetsListDependencyContainer()
+    var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let AppDependencyContainer = BitpandaAppDependencyContainer()
-        let result = AppDependencyContainer.sharedAssetSessionRepository.fetchAssets()
-        result.catch(on: .main) { error in
-            let errorMessage = (error as? BitpandaKitError)?.description
-            print(errorMessage ?? "")
-        }.then(on: .main) { resultAttributes in
-            print(resultAttributes)
-        }
-        
+        let mainVC = injectionContainer.makeAssetsListViewController()
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        window?.rootViewController = mainVC
         return true
     }
 }

@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4324419027C246E600A78FE8 /* AssetsListDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324418F27C246E600A78FE8 /* AssetsListDependencyContainer.swift */; };
+		4324419327C24FB700A78FE8 /* AssetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324419127C24FB700A78FE8 /* AssetsListViewController.swift */; };
+		4324419427C24FB700A78FE8 /* AssetsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4324419227C24FB700A78FE8 /* AssetsListViewController.xib */; };
+		4324419A27C2518F00A78FE8 /* AssetListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324419827C2518F00A78FE8 /* AssetListItemTableViewCell.swift */; };
+		4324419B27C2518F00A78FE8 /* AssetListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4324419927C2518F00A78FE8 /* AssetListItemTableViewCell.xib */; };
+		4324419E27C2544000A78FE8 /* AssetsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324419D27C2544000A78FE8 /* AssetsListViewModel.swift */; };
+		432441A027C25BC700A78FE8 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324419F27C25BC700A78FE8 /* ErrorMessage.swift */; };
+		432441A527C270D100A78FE8 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432441A427C270D000A78FE8 /* UIViewControllerExtension.swift */; };
+		432441A927C2C51000A78FE8 /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432441A827C2C51000A78FE8 /* CollectionExtension.swift */; };
+		432441AC27C2D1F200A78FE8 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432441AB27C2D1F200A78FE8 /* UIImageViewExtension.swift */; };
+		432441AE27C2DDCD00A78FE8 /* AssetListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432441AD27C2DDCC00A78FE8 /* AssetListItemViewModel.swift */; };
 		439B011227C12001001D490A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B011127C12001001D490A /* AppDelegate.swift */; };
 		439B011E27C12006001D490A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439B011D27C12006001D490A /* Assets.xcassets */; };
 		439B012127C12006001D490A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439B011F27C12006001D490A /* LaunchScreen.storyboard */; };
@@ -49,6 +60,17 @@
 /* Begin PBXFileReference section */
 		00256AC69F1689086314FBFD /* Pods_BitpandaCodeChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitpandaCodeChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		206791F017D5DEDD4EE85980 /* Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests/Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4324418F27C246E600A78FE8 /* AssetsListDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsListDependencyContainer.swift; sourceTree = "<group>"; };
+		4324419127C24FB700A78FE8 /* AssetsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsListViewController.swift; sourceTree = "<group>"; };
+		4324419227C24FB700A78FE8 /* AssetsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssetsListViewController.xib; sourceTree = "<group>"; };
+		4324419827C2518F00A78FE8 /* AssetListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListItemTableViewCell.swift; sourceTree = "<group>"; };
+		4324419927C2518F00A78FE8 /* AssetListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssetListItemTableViewCell.xib; sourceTree = "<group>"; };
+		4324419D27C2544000A78FE8 /* AssetsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsListViewModel.swift; sourceTree = "<group>"; };
+		4324419F27C25BC700A78FE8 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		432441A427C270D000A78FE8 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		432441A827C2C51000A78FE8 /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
+		432441AB27C2D1F200A78FE8 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		432441AD27C2DDCC00A78FE8 /* AssetListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListItemViewModel.swift; sourceTree = "<group>"; };
 		439B010E27C12001001D490A /* BitpandaCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitpandaCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439B011127C12001001D490A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		439B011D27C12006001D490A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +129,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4324418D27C2468600A78FE8 /* iOSApp */ = {
+			isa = PBXGroup;
+			children = (
+				439B016627C1C094001D490A /* BitpandaAppDependencyContainer.swift */,
+				4324418E27C2469D00A78FE8 /* AssetsList */,
+			);
+			path = iOSApp;
+			sourceTree = "<group>";
+		};
+		4324418E27C2469D00A78FE8 /* AssetsList */ = {
+			isa = PBXGroup;
+			children = (
+				4324419527C2511B00A78FE8 /* Dependency Container */,
+				4324419627C2512D00A78FE8 /* View */,
+			);
+			path = AssetsList;
+			sourceTree = "<group>";
+		};
+		4324419527C2511B00A78FE8 /* Dependency Container */ = {
+			isa = PBXGroup;
+			children = (
+				4324418F27C246E600A78FE8 /* AssetsListDependencyContainer.swift */,
+			);
+			path = "Dependency Container";
+			sourceTree = "<group>";
+		};
+		4324419627C2512D00A78FE8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4324419127C24FB700A78FE8 /* AssetsListViewController.swift */,
+				4324419227C24FB700A78FE8 /* AssetsListViewController.xib */,
+				4324419727C2516200A78FE8 /* Asset List Item */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4324419727C2516200A78FE8 /* Asset List Item */ = {
+			isa = PBXGroup;
+			children = (
+				4324419827C2518F00A78FE8 /* AssetListItemTableViewCell.swift */,
+				4324419927C2518F00A78FE8 /* AssetListItemTableViewCell.xib */,
+			);
+			path = "Asset List Item";
+			sourceTree = "<group>";
+		};
+		4324419C27C2542700A78FE8 /* AssetsList */ = {
+			isa = PBXGroup;
+			children = (
+				4324419D27C2544000A78FE8 /* AssetsListViewModel.swift */,
+				432441AD27C2DDCC00A78FE8 /* AssetListItemViewModel.swift */,
+			);
+			path = AssetsList;
+			sourceTree = "<group>";
+		};
+		432441A127C2705400A78FE8 /* BitpandaUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				432441A227C2707600A78FE8 /* Reusables */,
+			);
+			path = BitpandaUIKit;
+			sourceTree = "<group>";
+		};
+		432441A227C2707600A78FE8 /* Reusables */ = {
+			isa = PBXGroup;
+			children = (
+				432441A327C270B900A78FE8 /* Extensions */,
+			);
+			path = Reusables;
+			sourceTree = "<group>";
+		};
+		432441A327C270B900A78FE8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				432441A427C270D000A78FE8 /* UIViewControllerExtension.swift */,
+				432441A827C2C51000A78FE8 /* CollectionExtension.swift */,
+				432441AB27C2D1F200A78FE8 /* UIImageViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		439B010527C12001001D490A = {
 			isa = PBXGroup;
 			children = (
@@ -133,9 +235,9 @@
 			isa = PBXGroup;
 			children = (
 				439B014527C120F1001D490A /* Application */,
-				439B014927C1220A001D490A /* Presentation */,
+				439B014927C1220A001D490A /* Bitpanda_iOS */,
 				439B014427C1201A001D490A /* BitpandaKit */,
-				439B014627C12131001D490A /* Resources */,
+				432441A127C2705400A78FE8 /* BitpandaUIKit */,
 			);
 			path = BitpandaCodeChallenge;
 			sourceTree = "<group>";
@@ -170,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				439B011127C12001001D490A /* AppDelegate.swift */,
+				439B014627C12131001D490A /* Resources */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -192,14 +295,14 @@
 			path = Persistence;
 			sourceTree = "<group>";
 		};
-		439B014927C1220A001D490A /* Presentation */ = {
+		439B014927C1220A001D490A /* Bitpanda_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				439B016627C1C094001D490A /* BitpandaAppDependencyContainer.swift */,
+				4324418D27C2468600A78FE8 /* iOSApp */,
 				439B016A27C1C626001D490A /* Main.storyboard */,
 				439B016C27C1C658001D490A /* ViewController.swift */,
 			);
-			path = Presentation;
+			path = Bitpanda_iOS;
 			sourceTree = "<group>";
 		};
 		439B014A27C12250001D490A /* DataLayer */ = {
@@ -235,6 +338,7 @@
 			children = (
 				439B014E27C1234C001D490A /* Asset.swift */,
 				439B016827C1C41B001D490A /* BitpandaKitError.swift */,
+				4324419F27C25BC700A78FE8 /* ErrorMessage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,6 +364,7 @@
 		439B016527C1BF39001D490A /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				4324419C27C2542700A78FE8 /* AssetsList */,
 			);
 			path = UILayer;
 			sourceTree = "<group>";
@@ -397,9 +502,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				439B012127C12006001D490A /* LaunchScreen.storyboard in Resources */,
+				4324419B27C2518F00A78FE8 /* AssetListItemTableViewCell.xib in Resources */,
 				439B011E27C12006001D490A /* Assets.xcassets in Resources */,
 				439B015927C13C86001D490A /* Masterdata.json in Resources */,
 				439B016B27C1C627001D490A /* Main.storyboard in Resources */,
+				4324419427C24FB700A78FE8 /* AssetsListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,10 +637,19 @@
 				439B016D27C1C658001D490A /* ViewController.swift in Sources */,
 				439B011227C12001001D490A /* AppDelegate.swift in Sources */,
 				439B014F27C1234C001D490A /* Asset.swift in Sources */,
+				4324419327C24FB700A78FE8 /* AssetsListViewController.swift in Sources */,
+				432441A527C270D100A78FE8 /* UIViewControllerExtension.swift in Sources */,
+				432441AE27C2DDCD00A78FE8 /* AssetListItemViewModel.swift in Sources */,
+				432441A927C2C51000A78FE8 /* CollectionExtension.swift in Sources */,
+				4324419027C246E600A78FE8 /* AssetsListDependencyContainer.swift in Sources */,
 				439B016227C1B987001D490A /* FakeRemoteAssetsAPI.swift in Sources */,
+				4324419A27C2518F00A78FE8 /* AssetListItemTableViewCell.swift in Sources */,
+				432441A027C25BC700A78FE8 /* ErrorMessage.swift in Sources */,
+				4324419E27C2544000A78FE8 /* AssetsListViewModel.swift in Sources */,
 				439B016427C1BECB001D490A /* BitpandaRemoteAssetsAPI.swift in Sources */,
 				439B015627C1355A001D490A /* BitpandaAssetsRepository.swift in Sources */,
 				439B016727C1C094001D490A /* BitpandaAppDependencyContainer.swift in Sources */,
+				432441AC27C2D1F200A78FE8 /* UIImageViewExtension.swift in Sources */,
 				439B016927C1C41B001D490A /* BitpandaKitError.swift in Sources */,
 				439B015F27C1B8E5001D490A /* RemoteAssetsAPI.swift in Sources */,
 				439B015327C13271001D490A /* AssetsRepository.swift in Sources */,
@@ -635,7 +751,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -690,7 +806,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -711,10 +827,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = EE6W939978;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BitpandaCodeChallenge/Resources/Info.plist;
+				INFOPLIST_FILE = BitpandaCodeChallenge/Application/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -727,7 +844,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG ASSETS_SESSION_DATASTORE_LOCALFILE";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -742,10 +859,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = EE6W939978;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BitpandaCodeChallenge/Resources/Info.plist;
+				INFOPLIST_FILE = BitpandaCodeChallenge/Application/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -758,7 +876,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = RELEASE;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
