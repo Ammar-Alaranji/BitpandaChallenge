@@ -80,14 +80,17 @@ class AssetsListViewModel {
         
         self.assetsListItems = self.allAssetsList.filter { assetItem in
             
+            if !searchIsActive {
+                return true
+            }
+            
             var filterPredicat: Bool = false
             if appliedFilter == "All" || appliedFilter.lowercased().contains(assetItem.type.rawValue.lowercased()) {
                 filterPredicat = true
             }
                         
-            // Only apply text search when search bar is active
-            // and on the selected group as well
-            if searchIsActive && filterPredicat {
+            // Only apply text search on the selected group as well
+            if filterPredicat {
                 // if searchtext is empty return the item,
                 return searchText.isEmpty ? true : assetItem.name.lowercased().contains(searchText.lowercased())
             } else {
@@ -95,11 +98,6 @@ class AssetsListViewModel {
                 return filterPredicat
             }
         }
-    }
-    
-    func removeAppliedFilters() {
-        
-        self.assetsListItems = self.allAssetsList
     }
 }
 
