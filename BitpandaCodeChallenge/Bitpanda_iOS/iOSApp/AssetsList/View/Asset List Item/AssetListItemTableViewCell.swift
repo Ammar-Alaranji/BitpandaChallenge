@@ -9,7 +9,7 @@ import UIKit
 import Combine
 
 class AssetListItemTableViewCell: UITableViewCell {
-
+    
     // MARK: - Static Variables
     static let reuseIdentifier = String(describing: AssetListItemTableViewCell.self)
     static let height = CGFloat(60)
@@ -37,14 +37,14 @@ class AssetListItemTableViewCell: UITableViewCell {
         
         // Fill average price details
         self.avergePriceLabel.text = assetListItemViewModel.avergePrice
-
+        
         self.iconImageView.downloadedsvg(from: assetListItemViewModel.icon, withPlaceHolder: UIImage(named: "placeHolder"))
-     }
+    }
 }
 
 // MARK: - Dynamic behavior
 extension AssetListItemTableViewCell {
-
+    
     func bindViewModelToViews() {
         self.bindViewModelToAveragePriceLabel()
     }

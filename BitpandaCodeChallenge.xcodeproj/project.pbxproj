@@ -18,6 +18,8 @@
 		432441A927C2C51000A78FE8 /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432441A827C2C51000A78FE8 /* CollectionExtension.swift */; };
 		432441AC27C2D1F200A78FE8 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432441AB27C2D1F200A78FE8 /* UIImageViewExtension.swift */; };
 		432441AE27C2DDCD00A78FE8 /* AssetListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432441AD27C2DDCC00A78FE8 /* AssetListItemViewModel.swift */; };
+		432441B027C2E9D800A78FE8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432441AF27C2E9D800A78FE8 /* StringExtension.swift */; };
+		432441B227C300F200A78FE8 /* BitpandaMainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432441B127C300F100A78FE8 /* BitpandaMainNavigationViewController.swift */; };
 		439B011227C12001001D490A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B011127C12001001D490A /* AppDelegate.swift */; };
 		439B011E27C12006001D490A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439B011D27C12006001D490A /* Assets.xcassets */; };
 		439B012127C12006001D490A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439B011F27C12006001D490A /* LaunchScreen.storyboard */; };
@@ -34,7 +36,6 @@
 		439B016727C1C094001D490A /* BitpandaAppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B016627C1C094001D490A /* BitpandaAppDependencyContainer.swift */; };
 		439B016927C1C41B001D490A /* BitpandaKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B016827C1C41B001D490A /* BitpandaKitError.swift */; };
 		439B016B27C1C627001D490A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439B016A27C1C626001D490A /* Main.storyboard */; };
-		439B016D27C1C658001D490A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B016C27C1C658001D490A /* ViewController.swift */; };
 		63F5A190997C5645E6E5C03F /* Pods_BitpandaCodeChallenge_BitpandaCodeChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94346039C5C2A3855B68DFF9 /* Pods_BitpandaCodeChallenge_BitpandaCodeChallengeUITests.framework */; };
 		695FF92A5ADE01567774A802 /* Pods_BitpandaCodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD800F2F0306276A52DA89D7 /* Pods_BitpandaCodeChallenge.framework */; };
 		90C269850B65B4AC3CF3AAA8 /* Pods_BitpandaCodeChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00256AC69F1689086314FBFD /* Pods_BitpandaCodeChallengeTests.framework */; };
@@ -71,6 +72,8 @@
 		432441A827C2C51000A78FE8 /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
 		432441AB27C2D1F200A78FE8 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		432441AD27C2DDCC00A78FE8 /* AssetListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListItemViewModel.swift; sourceTree = "<group>"; };
+		432441AF27C2E9D800A78FE8 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		432441B127C300F100A78FE8 /* BitpandaMainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitpandaMainNavigationViewController.swift; sourceTree = "<group>"; };
 		439B010E27C12001001D490A /* BitpandaCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitpandaCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439B011127C12001001D490A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		439B011D27C12006001D490A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,7 +94,6 @@
 		439B016627C1C094001D490A /* BitpandaAppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitpandaAppDependencyContainer.swift; sourceTree = "<group>"; };
 		439B016827C1C41B001D490A /* BitpandaKitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitpandaKitError.swift; sourceTree = "<group>"; };
 		439B016A27C1C626001D490A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		439B016C27C1C658001D490A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		60E031271D5CC8E4A18A8840 /* Pods-BitpandaCodeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitpandaCodeChallenge.debug.xcconfig"; path = "Target Support Files/Pods-BitpandaCodeChallenge/Pods-BitpandaCodeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		94346039C5C2A3855B68DFF9 /* Pods_BitpandaCodeChallenge_BitpandaCodeChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitpandaCodeChallenge_BitpandaCodeChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F168FE567C23AE17D819640 /* Pods-BitpandaCodeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitpandaCodeChallenge.release.xcconfig"; path = "Target Support Files/Pods-BitpandaCodeChallenge/Pods-BitpandaCodeChallenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				439B016627C1C094001D490A /* BitpandaAppDependencyContainer.swift */,
+				432441B127C300F100A78FE8 /* BitpandaMainNavigationViewController.swift */,
 				4324418E27C2469D00A78FE8 /* AssetsList */,
 			);
 			path = iOSApp;
@@ -205,6 +208,7 @@
 				432441A427C270D000A78FE8 /* UIViewControllerExtension.swift */,
 				432441A827C2C51000A78FE8 /* CollectionExtension.swift */,
 				432441AB27C2D1F200A78FE8 /* UIImageViewExtension.swift */,
+				432441AF27C2E9D800A78FE8 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -300,7 +304,6 @@
 			children = (
 				4324418D27C2468600A78FE8 /* iOSApp */,
 				439B016A27C1C626001D490A /* Main.storyboard */,
-				439B016C27C1C658001D490A /* ViewController.swift */,
 			);
 			path = Bitpanda_iOS;
 			sourceTree = "<group>";
@@ -634,7 +637,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				439B016D27C1C658001D490A /* ViewController.swift in Sources */,
 				439B011227C12001001D490A /* AppDelegate.swift in Sources */,
 				439B014F27C1234C001D490A /* Asset.swift in Sources */,
 				4324419327C24FB700A78FE8 /* AssetsListViewController.swift in Sources */,
@@ -646,6 +648,8 @@
 				4324419A27C2518F00A78FE8 /* AssetListItemTableViewCell.swift in Sources */,
 				432441A027C25BC700A78FE8 /* ErrorMessage.swift in Sources */,
 				4324419E27C2544000A78FE8 /* AssetsListViewModel.swift in Sources */,
+				432441B027C2E9D800A78FE8 /* StringExtension.swift in Sources */,
+				432441B227C300F200A78FE8 /* BitpandaMainNavigationViewController.swift in Sources */,
 				439B016427C1BECB001D490A /* BitpandaRemoteAssetsAPI.swift in Sources */,
 				439B015627C1355A001D490A /* BitpandaAssetsRepository.swift in Sources */,
 				439B016727C1C094001D490A /* BitpandaAppDependencyContainer.swift in Sources */,

@@ -14,20 +14,21 @@ class AssetsListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var errorMessageLabel: UILabel!
     @IBOutlet weak var fetchDataActivityIndicator: UIActivityIndicatorView!
+    let searchController = UISearchController()
     
     // MARK: - Dependencies
     var subscriptions = Set<AnyCancellable>()
     private var assetListViewModel: AssetsListViewModel?
     
     // MARK: - Factory method
-    static func create(assetListViewModel: AssetsListViewModel) -> AssetsListViewController {
+    static func create(assetListViewModel: AssetsListViewModel) -> UIViewController {
         
         // Create instance from AssetsListViewController
         let viewController = AssetsListViewController.init(nibName: AssetsListViewController.defaultFileName, bundle: nil)
         
         // Assign assetListViewModel value
         viewController.assetListViewModel = assetListViewModel
-        
+                
         return viewController
     }
     
@@ -36,8 +37,12 @@ class AssetsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Setup all views
         self.setupViews()
+        // Bind view/viewmodel
+        self.bindFieldsToViewModel()
         self.bindViewModelToViews()
+        // load data
         self.assetListViewModel?.loadAssetsData()
     }
     
@@ -50,6 +55,11 @@ class AssetsListViewController: UIViewController {
         
         self.errorMessageLabel.text = ""
         self.fetchDataActivityIndicator.stopAnimating()
+        self.setupTableView()
+        self.initSearchController()
+    }
+    
+    private func setupTableView() {
         
         self.tableView.estimatedRowHeight = AssetListItemTableViewCell.height
         self.tableView.rowHeight = UITableView.automaticDimension
@@ -57,6 +67,22 @@ class AssetsListViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.register(UINib(nibName: AssetListItemTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: AssetListItemTableViewCell.reuseIdentifier)
     }
+    
+    private func initSearchController()
+        {
+            searchController.loadViewIfNeeded()
+            searchController.searchResultsUpdater = self
+            searchController.obscuresBackgroundDuringPresentation = false
+            searchController.searchBar.enablesReturnKeyAutomatically = false
+            searchController.searchBar.returnKeyType = UIReturnKeyType.done
+            definesPresentationContext = true
+            
+            navigationItem.searchController = searchController
+            navigationItem.hidesSearchBarWhenScrolling = false
+            searchController.searchBar.scopeButtonTitles = self.assetListViewModel?.searchBarButtonTitles
+            searchController.searchBar.selectedScopeButtonIndex = 0
+            searchController.searchBar.delegate = self
+        }
 }
 
 // MARK: - Implement tableview delegates
@@ -88,10 +114,27 @@ extension AssetsListViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: - Dynamic behavior
 extension AssetsListViewController {
 
+    func bindFieldsToViewModel() {
+      
+        self.bindSearchBarActiveStatus()
+    }
+    
+    func bindSearchBarActiveStatus() {
+        if let assetListViewModel = assetListViewModel {
+            self.searchController
+                .publisher(for: \.isActive)
+                .receive(on: DispatchQueue.main)
+                .map() { $0 }
+                .assign(to: \.isSearchBarActive, on: assetListViewModel)
+                .store(in: &subscriptions)
+        }
+    }
+    
     func bindViewModelToViews() {
         self.bindViewModelToFetchDataActivityIndicator()
         self.bindViewModelToErrorMessageLabel()
         self.bindViewModelToTableView()
+        self.bindViewModelToFiltersTitles()
     }
     
     func bindViewModelToFetchDataActivityIndicator() {
@@ -127,5 +170,30 @@ extension AssetsListViewController {
                 self?.reload()
             })
             .store(in: &subscriptions)
+    }
+    
+    func bindViewModelToFiltersTitles() {
+        
+        self.assetListViewModel?
+            .$searchBarButtonTitles
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { [weak self] typesList in
+                self?.searchController.searchBar.scopeButtonTitles = typesList
+            })
+            .store(in: &subscriptions)
+    }
+}
+
+// MARK: - implement SearchBar delegates
+extension AssetsListViewController: UISearchBarDelegate, UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        let searchBar = searchController.searchBar
+        let searchText = searchBar.text ?? ""
+        let selectedScopeButtonText = searchBar.scopeButtonTitles?[searchBar.selectedScopeButtonIndex] ?? ""
+        
+        self.assetListViewModel?.applyFilter(searchText: searchText,
+                                             appliedFilter: selectedScopeButtonText,
+                                             searchIsActive: searchController.isActive)
     }
 }

@@ -10,11 +10,13 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    let injectionContainer = AssetsListDependencyContainer()
+    let bitpandaAppDependencyContainer = BitpandaAppDependencyContainer()
+    
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    
+        let injectionContainer = AssetsListDependencyContainer(bitpandaNavigation: bitpandaAppDependencyContainer)
         let mainVC = injectionContainer.makeAssetsListViewController()
 
         window = UIWindow(frame: UIScreen.main.bounds)

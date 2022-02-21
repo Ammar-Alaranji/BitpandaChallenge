@@ -12,9 +12,10 @@ class AssetsListDependencyContainer {
     
     // MARK: - Properties
     let sharedAssetSessionRepository: AssetsRepository
+    let bitpandaNavigation: BitpandaNavigation
     
     // MARK: - Methods
-    init() {
+    init(bitpandaNavigation: BitpandaNavigation) {
         
         func makeAssetSessionRepository() -> AssetsRepository {
                 
@@ -31,15 +32,20 @@ class AssetsListDependencyContainer {
             #endif
         }
         
+        self.bitpandaNavigation = bitpandaNavigation
         self.sharedAssetSessionRepository = makeAssetSessionRepository()
     }
     
     // MARK: - Factory Methods
     // Create AssetsListViewController
-    func makeAssetsListViewController() -> AssetsListViewController {
+    func makeAssetsListViewController() -> UIViewController {
         
         let assetsListViewModle = self.makeAssetsListViewModel()
-        return AssetsListViewController.create(assetListViewModel: assetsListViewModle)
+        let navigation = self.bitpandaNavigation.makeMainNavigationViewController()
+        let assetsListViewController = AssetsListViewController.create(assetListViewModel: assetsListViewModle)
+        
+        navigation.setViewControllers([assetsListViewController], animated: false)
+        return navigation
     }
     
     func makeAssetsListViewModel() -> AssetsListViewModel {

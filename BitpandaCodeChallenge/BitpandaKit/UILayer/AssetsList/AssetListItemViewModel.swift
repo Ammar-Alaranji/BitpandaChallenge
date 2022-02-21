@@ -13,18 +13,21 @@ class AssetListItemViewModel {
     var icon: URL
     var name: String
     var avergePrice: String
+    var type: Asset.AssetType
     
     // MARK: - Publishers
     @Published public private(set) var averagePriceIsHidden = false
     
     init(asset: Asset) {
+        self.type = asset.type
         self.icon = asset.attributes.icon
         self.name = asset.attributes.name + " - " + asset.attributes.symbol
         
-        let showPriceFiat = asset.type == .commodity || asset.type == .cryptocoin
-        if showPriceFiat {
+        let showPrice = asset.type == .commodity || asset.type == .cryptocoin
+        if showPrice {
             self.averagePriceIsHidden = false
-            self.avergePrice = String(format: "\(asset.attributes.averagePrice ?? "") %@", showPriceFiat ? "Euro" : "")
+            let formattedAveragePrice = asset.attributes.averagePrice?.currency(maximumFractionDigits: asset.attributes.percesionForFiatPrice)
+            self.avergePrice = formattedAveragePrice ?? ""
         } else {
             self.avergePrice = ""
             self.averagePriceIsHidden = true

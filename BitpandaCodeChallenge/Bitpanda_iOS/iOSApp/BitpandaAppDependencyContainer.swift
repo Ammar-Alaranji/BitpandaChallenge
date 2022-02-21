@@ -6,12 +6,24 @@
 //
 
 import Foundation
+import UIKit
 
-class BitpandaAppDependencyContainer {
+class BitpandaAppDependencyContainer: BitpandaNavigation {
     
     // MARK: - Properties
+    var navigationFactory: ((BitpandaMainNavigationViewController) -> Void)?
     
     // MARK: - Methods
     
     // MARK: - Factory Methods
+    func makeMainNavigationViewController() -> UINavigationController {
+                
+        return BitpandaMainNavigationViewController.create()
+    }
+}
+ 
+protocol BitpandaNavigation {
+    
+    // MARK: - Factory Methods
+    func makeMainNavigationViewController() -> UINavigationController
 }

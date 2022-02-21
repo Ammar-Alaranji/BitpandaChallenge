@@ -12,6 +12,12 @@ class AssetsListViewModel {
     
     // MARK: - Properties
     var assetsRepository: AssetsRepository
+    var isEmpty: Bool { return self.assetsListItems.isEmpty }
+    var searchBarButtonTitlesSet: Set<String> = []
+    var allAssetsList: [AssetListItemViewModel] = []
+    
+    // MARK: - Bind Properties
+    var isSearchBarActive: Bool = false
     
     // MARK: - Methods
     init(assetsRepository: AssetsRepository) {
@@ -24,11 +30,10 @@ class AssetsListViewModel {
     }
     private let errorMessagesSubject = PassthroughSubject<ErrorMessage, Never>()
     
+    @Published public private(set) var searchBarButtonTitles: [String] = []
     @Published public private(set) var assetsListItems: [AssetListItemViewModel] = []
     @Published public private(set) var errorMessageLabel: String = ""
     @Published public private(set) var fetchingActivityIndicatorAnimating = false
-    
-    var isEmpty: Bool { return self.assetsListItems.isEmpty }
     
     // Fetch assets data
     func loadAssetsData() {
@@ -56,10 +61,50 @@ class AssetsListViewModel {
             return fiat.attributes.hasWalet ?? false
         }))
         
-        self.assetsListItems = tempListItem.map({ Asset in
-            return AssetListItemViewModel(asset: Asset)
+        // Map the Assets array to AssetListItemViewModel array
+        self.assetsListItems = tempListItem.map({ asset in
+            self.searchBarButtonTitlesSet.insert(asset.type.rawValue.capitalized)
+            return AssetListItemViewModel(asset: asset)
         })
+        
+        // Append All type to searchBarButtonTitlesSet
+        self.searchBarButtonTitlesSet.insert("All")
+        
+        self.searchBarButtonTitles = self.searchBarButtonTitlesSet.sorted(by: { firstAssetType, secondAssetType in
+            return firstAssetType < secondAssetType
+        })
+        self.allAssetsList = self.assetsListItems
     }
+    
+    func applyFilter(searchText: String, appliedFilter: String = "All", searchIsActive: Bool) {
+        
+        self.assetsListItems = self.allAssetsList.filter { assetItem in
+            
+            var filterPredicat: Bool = false
+            if appliedFilter == "All" || appliedFilter.lowercased().contains(assetItem.type.rawValue.lowercased()) {
+                filterPredicat = true
+            }
+                        
+            // Only apply text search when search bar is active
+            // and on the selected group as well
+            if searchIsActive && filterPredicat {
+                // if searchtext is empty return the item,
+                return searchText.isEmpty ? true : assetItem.name.lowercased().contains(searchText.lowercased())
+            } else {
+                // filter when search is not active
+                return filterPredicat
+            }
+        }
+    }
+    
+    func removeAppliedFilters() {
+        
+        self.assetsListItems = self.allAssetsList
+    }
+}
+
+// MARK: - Fetch Data Methods
+extension AssetsListViewModel {
     
     func indicateFetchingData() {
         // Reset error message/label
@@ -85,3 +130,31 @@ class AssetsListViewModel {
         self.fetchingActivityIndicatorAnimating = false
     }
 }
+
+enum FilterTypes: String {
+    case all
+    case cryptocoins
+    case commodities
+    case fiats
+    
+    var description: String {
+        switch self {
+        case .all:
+            return NSLocalizedString("All", comment: "Asset filter button title")
+        case .cryptocoins:
+            return NSLocalizedString("Cryptocoins", comment: "Asset filter button title")
+        case .commodities:
+            return NSLocalizedString("Commodities", comment: "Asset filter button title")
+        case .fiats:
+            return NSLocalizedString("Fiats", comment: "Asset filter button title")
+        }
+    }
+    
+    static var list: [String] {
+        return [FilterTypes.all.description,
+                FilterTypes.cryptocoins.description,
+                FilterTypes.commodities.description,
+                FilterTypes.fiats.description]
+    }
+}
+
