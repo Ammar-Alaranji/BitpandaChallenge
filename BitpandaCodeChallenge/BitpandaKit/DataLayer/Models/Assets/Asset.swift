@@ -7,21 +7,6 @@
 
 import Foundation
 
-struct Masterdata: Codable {
-    let data: DataAttribute
-}
-
-struct DataAttribute : Codable {
-    let type: String
-    let attributes: Attributes
-}
-
-struct Attributes: Codable {
-    let cryptocoins: [Asset]
-    let commodities: [Asset]
-    let fiats: [Asset]
-}
-
 struct Asset: Codable {
     typealias Identifier = String
     enum AssetType: String, Codable {

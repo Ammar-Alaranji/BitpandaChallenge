@@ -16,7 +16,7 @@ class AssetsListViewModel {
     var searchBarButtonTitlesSet: Set<String> = []
     var allAssetsList: [AssetListItemViewModel] = []
     
-    // MARK: - Bind Properties
+    // MARK: - Binded Properties
     var isSearchBarActive: Bool = false
     
     // MARK: - Methods
@@ -35,7 +35,7 @@ class AssetsListViewModel {
     @Published public private(set) var errorMessageLabel: String = ""
     @Published public private(set) var fetchingActivityIndicatorAnimating = false
     
-    // Fetch assets data
+    // MARK: - Fetch and Handle
     func loadAssetsData() {
         self.indicateFetchingData()
         self.assetsRepository.fetchAssets()
@@ -119,7 +119,7 @@ extension AssetsListViewModel {
     }
     
     func indicateFetchDataError(error: Error) {
-        let errorMessageString = NSLocalizedString("Sorry, We couldn't load the Assets Data", comment: "On-screen error message")
+        let errorMessageString = NSLocalizedString("Sorry, We couldn't load your assets", comment: "On-screen error message")
         errorMessagesSubject.send(ErrorMessage(title: NSLocalizedString("Opps!", comment: "On-screen error message title message"), message: errorMessageString))
         
         // Show the error message

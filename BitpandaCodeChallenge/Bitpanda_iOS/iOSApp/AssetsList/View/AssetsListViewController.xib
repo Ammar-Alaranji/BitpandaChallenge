@@ -26,9 +26,9 @@
                     <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oop-n9-Q1Z">
-                    <rect key="frame" x="129" y="464.5" width="156.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oop-n9-Q1Z">
+                    <rect key="frame" x="124" y="465" width="166.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -39,6 +39,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oop-n9-Q1Z" secondAttribute="trailing" constant="16" id="8Qj-0E-CHT"/>
                 <constraint firstItem="rZA-wW-uqr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9us-8W-OCA"/>
                 <constraint firstItem="oop-n9-Q1Z" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="FVh-B1-cBr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rZA-wW-uqr" secondAttribute="trailing" id="L30-h2-Hyf"/>
@@ -47,6 +48,7 @@
                 <constraint firstItem="oop-n9-Q1Z" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="fwd-je-97f"/>
                 <constraint firstItem="8JS-TV-t8G" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="k90-9L-hBY"/>
                 <constraint firstItem="8JS-TV-t8G" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="r8h-jT-psZ"/>
+                <constraint firstItem="oop-n9-Q1Z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="yHh-A1-R8h"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <point key="canvasLocation" x="139" y="98"/>

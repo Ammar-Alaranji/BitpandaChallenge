@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WalletListViewController" customModule="BitpandaCodeChallenge" customModuleProvider="target">
+            <connections>
+                <outlet property="errorMessageLabel" destination="gNc-8k-5KW" id="jPD-eO-N93"/>
+                <outlet property="fetchDataIndicator" destination="2Xv-BK-MHa" id="Phm-h7-Pud"/>
+                <outlet property="tableView" destination="Ypb-vD-fq3" id="Hse-0G-pWO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="walletsTypeSegmentedControl" destination="C5H-yi-Nkn" id="udv-Pm-n1b"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="C5H-yi-Nkn">
+                    <rect key="frame" x="16" y="44" width="382" height="32"/>
+                    <segments>
+                        <segment title="Wallets &amp; Commodity Wallets"/>
+                        <segment title="Fiat Wallets"/>
+                    </segments>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ypb-vD-fq3">
+                    <rect key="frame" x="0.0" y="91" width="414" height="771"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="2Xv-BK-MHa">
+                    <rect key="frame" x="197" y="443" width="20" height="20"/>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNc-8k-5KW">
+                    <rect key="frame" x="207" y="453" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ypb-vD-fq3" secondAttribute="bottom" id="1Yf-pb-FbR"/>
+                <constraint firstItem="C5H-yi-Nkn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="GYI-Rw-NT7"/>
+                <constraint firstItem="C5H-yi-Nkn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="KZX-Ky-0i1"/>
+                <constraint firstItem="gNc-8k-5KW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="LTg-vu-zxq"/>
+                <constraint firstItem="2Xv-BK-MHa" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="NhV-l9-w5W"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gNc-8k-5KW" secondAttribute="trailing" constant="16" id="Obu-tT-hkD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="C5H-yi-Nkn" secondAttribute="trailing" constant="16" id="R0m-dn-s9X"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ypb-vD-fq3" secondAttribute="trailing" id="RXC-vh-O3a"/>
+                <constraint firstItem="gNc-8k-5KW" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="UBw-4T-xHE"/>
+                <constraint firstItem="Ypb-vD-fq3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WLX-74-nJl"/>
+                <constraint firstItem="Ypb-vD-fq3" firstAttribute="top" secondItem="C5H-yi-Nkn" secondAttribute="bottom" constant="16" id="Zh3-r5-1JU"/>
+                <constraint firstItem="gNc-8k-5KW" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="hT4-ea-52L"/>
+                <constraint firstItem="2Xv-BK-MHa" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="rsC-H7-aHx"/>
+            </constraints>
+            <point key="canvasLocation" x="7" y="116"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

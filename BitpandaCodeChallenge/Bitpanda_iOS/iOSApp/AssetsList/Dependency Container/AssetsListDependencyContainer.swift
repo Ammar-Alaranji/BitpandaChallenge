@@ -11,8 +11,8 @@ import Foundation
 class AssetsListDependencyContainer {
     
     // MARK: - Properties
-    let sharedAssetSessionRepository: AssetsRepository
-    let bitpandaNavigation: BitpandaNavigation
+    private let sharedAssetSessionRepository: AssetsRepository
+    private let bitpandaNavigation: BitpandaNavigation
     
     // MARK: - Methods
     init(bitpandaNavigation: BitpandaNavigation) {
@@ -48,7 +48,7 @@ class AssetsListDependencyContainer {
         return navigation
     }
     
-    func makeAssetsListViewModel() -> AssetsListViewModel {
+    private func makeAssetsListViewModel() -> AssetsListViewModel {
         return AssetsListViewModel(assetsRepository: self.sharedAssetSessionRepository)
     }
 }

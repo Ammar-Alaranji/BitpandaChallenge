@@ -36,6 +36,23 @@
 		439B016727C1C094001D490A /* BitpandaAppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B016627C1C094001D490A /* BitpandaAppDependencyContainer.swift */; };
 		439B016927C1C41B001D490A /* BitpandaKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B016827C1C41B001D490A /* BitpandaKitError.swift */; };
 		439B016B27C1C627001D490A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439B016A27C1C626001D490A /* Main.storyboard */; };
+		43A33AB927C3C69F002B3EC1 /* WalletListDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A33AB827C3C69F002B3EC1 /* WalletListDependencyContainer.swift */; };
+		43A33ABD27C3C6D2002B3EC1 /* WalletListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A33ABB27C3C6D2002B3EC1 /* WalletListViewController.swift */; };
+		43A33ABE27C3C6D2002B3EC1 /* WalletListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43A33ABC27C3C6D2002B3EC1 /* WalletListViewController.xib */; };
+		43A33AC227C3C719002B3EC1 /* WalletListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A33AC027C3C719002B3EC1 /* WalletListItemTableViewCell.swift */; };
+		43A33AC327C3C719002B3EC1 /* WalletListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43A33AC127C3C719002B3EC1 /* WalletListItemTableViewCell.xib */; };
+		43A33AC727C3C81A002B3EC1 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A33AC627C3C81A002B3EC1 /* Wallet.swift */; };
+		43A33ACB27C3CE2C002B3EC1 /* Masterdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A33ACA27C3CE2C002B3EC1 /* Masterdata.swift */; };
+		43A33ACD27C3D2D1002B3EC1 /* FiatWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A33ACC27C3D2D1002B3EC1 /* FiatWallet.swift */; };
+		43A33AD427C4067E002B3EC1 /* RemoteWalletsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A33AD327C4067E002B3EC1 /* RemoteWalletsAPI.swift */; };
+		43A33AD727C406E7002B3EC1 /* Wallets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A33AD627C406E7002B3EC1 /* Wallets.swift */; };
+		43A33ADA27C407E9002B3EC1 /* BitpandaRemoteWalletsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A33AD927C407E9002B3EC1 /* BitpandaRemoteWalletsAPI.swift */; };
+		43A33ADC27C407F4002B3EC1 /* FakeRemoteWalletsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A33ADB27C407F4002B3EC1 /* FakeRemoteWalletsAPI.swift */; };
+		43A33ADF27C40DA1002B3EC1 /* WalletsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A33ADE27C40DA1002B3EC1 /* WalletsRepository.swift */; };
+		43A33AE127C40F35002B3EC1 /* BitpandaWalletsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A33AE027C40F35002B3EC1 /* BitpandaWalletsRepository.swift */; };
+		43A33AE627C423C5002B3EC1 /* FiatWalletListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A33AE427C423C5002B3EC1 /* FiatWalletListItemTableViewCell.swift */; };
+		43A33AE727C423C5002B3EC1 /* FiatWalletListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43A33AE527C423C5002B3EC1 /* FiatWalletListItemTableViewCell.xib */; };
+		43A33AEA27C4246D002B3EC1 /* WalletsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A33AE927C4246D002B3EC1 /* WalletsListViewModel.swift */; };
 		63F5A190997C5645E6E5C03F /* Pods_BitpandaCodeChallenge_BitpandaCodeChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94346039C5C2A3855B68DFF9 /* Pods_BitpandaCodeChallenge_BitpandaCodeChallengeUITests.framework */; };
 		695FF92A5ADE01567774A802 /* Pods_BitpandaCodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD800F2F0306276A52DA89D7 /* Pods_BitpandaCodeChallenge.framework */; };
 		90C269850B65B4AC3CF3AAA8 /* Pods_BitpandaCodeChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00256AC69F1689086314FBFD /* Pods_BitpandaCodeChallengeTests.framework */; };
@@ -94,6 +111,23 @@
 		439B016627C1C094001D490A /* BitpandaAppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitpandaAppDependencyContainer.swift; sourceTree = "<group>"; };
 		439B016827C1C41B001D490A /* BitpandaKitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitpandaKitError.swift; sourceTree = "<group>"; };
 		439B016A27C1C626001D490A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		43A33AB827C3C69F002B3EC1 /* WalletListDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletListDependencyContainer.swift; sourceTree = "<group>"; };
+		43A33ABB27C3C6D2002B3EC1 /* WalletListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletListViewController.swift; sourceTree = "<group>"; };
+		43A33ABC27C3C6D2002B3EC1 /* WalletListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletListViewController.xib; sourceTree = "<group>"; };
+		43A33AC027C3C719002B3EC1 /* WalletListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletListItemTableViewCell.swift; sourceTree = "<group>"; };
+		43A33AC127C3C719002B3EC1 /* WalletListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletListItemTableViewCell.xib; sourceTree = "<group>"; };
+		43A33AC627C3C81A002B3EC1 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		43A33ACA27C3CE2C002B3EC1 /* Masterdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Masterdata.swift; sourceTree = "<group>"; };
+		43A33ACC27C3D2D1002B3EC1 /* FiatWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatWallet.swift; sourceTree = "<group>"; };
+		43A33AD327C4067E002B3EC1 /* RemoteWalletsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWalletsAPI.swift; sourceTree = "<group>"; };
+		43A33AD627C406E7002B3EC1 /* Wallets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallets.swift; sourceTree = "<group>"; };
+		43A33AD927C407E9002B3EC1 /* BitpandaRemoteWalletsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitpandaRemoteWalletsAPI.swift; sourceTree = "<group>"; };
+		43A33ADB27C407F4002B3EC1 /* FakeRemoteWalletsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeRemoteWalletsAPI.swift; sourceTree = "<group>"; };
+		43A33ADE27C40DA1002B3EC1 /* WalletsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsRepository.swift; sourceTree = "<group>"; };
+		43A33AE027C40F35002B3EC1 /* BitpandaWalletsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitpandaWalletsRepository.swift; sourceTree = "<group>"; };
+		43A33AE427C423C5002B3EC1 /* FiatWalletListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatWalletListItemTableViewCell.swift; sourceTree = "<group>"; };
+		43A33AE527C423C5002B3EC1 /* FiatWalletListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiatWalletListItemTableViewCell.xib; sourceTree = "<group>"; };
+		43A33AE927C4246D002B3EC1 /* WalletsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsListViewModel.swift; sourceTree = "<group>"; };
 		60E031271D5CC8E4A18A8840 /* Pods-BitpandaCodeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitpandaCodeChallenge.debug.xcconfig"; path = "Target Support Files/Pods-BitpandaCodeChallenge/Pods-BitpandaCodeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		94346039C5C2A3855B68DFF9 /* Pods_BitpandaCodeChallenge_BitpandaCodeChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitpandaCodeChallenge_BitpandaCodeChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F168FE567C23AE17D819640 /* Pods-BitpandaCodeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitpandaCodeChallenge.release.xcconfig"; path = "Target Support Files/Pods-BitpandaCodeChallenge/Pods-BitpandaCodeChallenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +171,7 @@
 				439B016627C1C094001D490A /* BitpandaAppDependencyContainer.swift */,
 				432441B127C300F100A78FE8 /* BitpandaMainNavigationViewController.swift */,
 				4324418E27C2469D00A78FE8 /* AssetsList */,
+				43A33AB627C3C61C002B3EC1 /* WalletList */,
 			);
 			path = iOSApp;
 			sourceTree = "<group>";
@@ -177,13 +212,13 @@
 			path = "Asset List Item";
 			sourceTree = "<group>";
 		};
-		4324419C27C2542700A78FE8 /* AssetsList */ = {
+		4324419C27C2542700A78FE8 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
 				4324419D27C2544000A78FE8 /* AssetsListViewModel.swift */,
 				432441AD27C2DDCC00A78FE8 /* AssetListItemViewModel.swift */,
 			);
-			path = AssetsList;
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		432441A127C2705400A78FE8 /* BitpandaUIKit */ = {
@@ -328,8 +363,8 @@
 		439B015127C1324E001D490A /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				439B015227C13270001D490A /* AssetsRepository.swift */,
-				439B015527C1355A001D490A /* BitpandaAssetsRepository.swift */,
+				43A33ADD27C40D8C002B3EC1 /* Wallets */,
+				43A33ACE27C3D9F9002B3EC1 /* Assets */,
 				439B014827C121B6001D490A /* Persistence */,
 				439B015D27C1B8B4001D490A /* Remote */,
 			);
@@ -339,7 +374,9 @@
 		439B015C27C1B2F2001D490A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				439B014E27C1234C001D490A /* Asset.swift */,
+				43A33AC827C3CE02002B3EC1 /* Master Data */,
+				43A33AC527C3C809002B3EC1 /* Wallets */,
+				43A33AC427C3C7FF002B3EC1 /* Assets */,
 				439B016827C1C41B001D490A /* BitpandaKitError.swift */,
 				4324419F27C25BC700A78FE8 /* ErrorMessage.swift */,
 			);
@@ -349,8 +386,8 @@
 		439B015D27C1B8B4001D490A /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				439B015E27C1B8E5001D490A /* RemoteAssetsAPI.swift */,
-				439B016027C1B919001D490A /* Implementation */,
+				43A33AD227C3DD1F002B3EC1 /* Wallets */,
+				43A33AD127C3DD13002B3EC1 /* Assets */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -367,9 +404,143 @@
 		439B016527C1BF39001D490A /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
-				4324419C27C2542700A78FE8 /* AssetsList */,
+				43A33AE827C42453002B3EC1 /* Wallets */,
+				4324419C27C2542700A78FE8 /* Assets */,
 			);
 			path = UILayer;
+			sourceTree = "<group>";
+		};
+		43A33AB627C3C61C002B3EC1 /* WalletList */ = {
+			isa = PBXGroup;
+			children = (
+				43A33AB727C3C658002B3EC1 /* Dependency Container */,
+				43A33ABA27C3C6B6002B3EC1 /* View */,
+			);
+			path = WalletList;
+			sourceTree = "<group>";
+		};
+		43A33AB727C3C658002B3EC1 /* Dependency Container */ = {
+			isa = PBXGroup;
+			children = (
+				43A33AB827C3C69F002B3EC1 /* WalletListDependencyContainer.swift */,
+			);
+			path = "Dependency Container";
+			sourceTree = "<group>";
+		};
+		43A33ABA27C3C6B6002B3EC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43A33ABB27C3C6D2002B3EC1 /* WalletListViewController.swift */,
+				43A33ABC27C3C6D2002B3EC1 /* WalletListViewController.xib */,
+				43A33ABF27C3C6DF002B3EC1 /* Wallet List Item */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		43A33ABF27C3C6DF002B3EC1 /* Wallet List Item */ = {
+			isa = PBXGroup;
+			children = (
+				43A33AE327C4239D002B3EC1 /* Fiat Wallets */,
+				43A33AE227C42390002B3EC1 /* Commodity and Wallets */,
+			);
+			path = "Wallet List Item";
+			sourceTree = "<group>";
+		};
+		43A33AC427C3C7FF002B3EC1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				439B014E27C1234C001D490A /* Asset.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		43A33AC527C3C809002B3EC1 /* Wallets */ = {
+			isa = PBXGroup;
+			children = (
+				43A33AD627C406E7002B3EC1 /* Wallets.swift */,
+				43A33AC627C3C81A002B3EC1 /* Wallet.swift */,
+				43A33ACC27C3D2D1002B3EC1 /* FiatWallet.swift */,
+			);
+			path = Wallets;
+			sourceTree = "<group>";
+		};
+		43A33AC827C3CE02002B3EC1 /* Master Data */ = {
+			isa = PBXGroup;
+			children = (
+				43A33ACA27C3CE2C002B3EC1 /* Masterdata.swift */,
+			);
+			path = "Master Data";
+			sourceTree = "<group>";
+		};
+		43A33ACE27C3D9F9002B3EC1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				439B015227C13270001D490A /* AssetsRepository.swift */,
+				439B015527C1355A001D490A /* BitpandaAssetsRepository.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		43A33AD127C3DD13002B3EC1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				439B015E27C1B8E5001D490A /* RemoteAssetsAPI.swift */,
+				439B016027C1B919001D490A /* Implementation */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		43A33AD227C3DD1F002B3EC1 /* Wallets */ = {
+			isa = PBXGroup;
+			children = (
+				43A33AD327C4067E002B3EC1 /* RemoteWalletsAPI.swift */,
+				43A33AD827C407C9002B3EC1 /* Implementation */,
+			);
+			path = Wallets;
+			sourceTree = "<group>";
+		};
+		43A33AD827C407C9002B3EC1 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				43A33ADB27C407F4002B3EC1 /* FakeRemoteWalletsAPI.swift */,
+				43A33AD927C407E9002B3EC1 /* BitpandaRemoteWalletsAPI.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		43A33ADD27C40D8C002B3EC1 /* Wallets */ = {
+			isa = PBXGroup;
+			children = (
+				43A33ADE27C40DA1002B3EC1 /* WalletsRepository.swift */,
+				43A33AE027C40F35002B3EC1 /* BitpandaWalletsRepository.swift */,
+			);
+			path = Wallets;
+			sourceTree = "<group>";
+		};
+		43A33AE227C42390002B3EC1 /* Commodity and Wallets */ = {
+			isa = PBXGroup;
+			children = (
+				43A33AC027C3C719002B3EC1 /* WalletListItemTableViewCell.swift */,
+				43A33AC127C3C719002B3EC1 /* WalletListItemTableViewCell.xib */,
+			);
+			path = "Commodity and Wallets";
+			sourceTree = "<group>";
+		};
+		43A33AE327C4239D002B3EC1 /* Fiat Wallets */ = {
+			isa = PBXGroup;
+			children = (
+				43A33AE427C423C5002B3EC1 /* FiatWalletListItemTableViewCell.swift */,
+				43A33AE527C423C5002B3EC1 /* FiatWalletListItemTableViewCell.xib */,
+			);
+			path = "Fiat Wallets";
+			sourceTree = "<group>";
+		};
+		43A33AE827C42453002B3EC1 /* Wallets */ = {
+			isa = PBXGroup;
+			children = (
+				43A33AE927C4246D002B3EC1 /* WalletsListViewModel.swift */,
+			);
+			path = Wallets;
 			sourceTree = "<group>";
 		};
 		456DBEBA57C31ACEE94B911B /* Frameworks */ = {
@@ -504,12 +675,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43A33ABE27C3C6D2002B3EC1 /* WalletListViewController.xib in Resources */,
 				439B012127C12006001D490A /* LaunchScreen.storyboard in Resources */,
 				4324419B27C2518F00A78FE8 /* AssetListItemTableViewCell.xib in Resources */,
 				439B011E27C12006001D490A /* Assets.xcassets in Resources */,
 				439B015927C13C86001D490A /* Masterdata.json in Resources */,
+				43A33AE727C423C5002B3EC1 /* FiatWalletListItemTableViewCell.xib in Resources */,
 				439B016B27C1C627001D490A /* Main.storyboard in Resources */,
 				4324419427C24FB700A78FE8 /* AssetsListViewController.xib in Resources */,
+				43A33AC327C3C719002B3EC1 /* WalletListItemTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,11 +811,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43A33ADC27C407F4002B3EC1 /* FakeRemoteWalletsAPI.swift in Sources */,
+				43A33AC727C3C81A002B3EC1 /* Wallet.swift in Sources */,
 				439B011227C12001001D490A /* AppDelegate.swift in Sources */,
+				43A33ADF27C40DA1002B3EC1 /* WalletsRepository.swift in Sources */,
 				439B014F27C1234C001D490A /* Asset.swift in Sources */,
 				4324419327C24FB700A78FE8 /* AssetsListViewController.swift in Sources */,
 				432441A527C270D100A78FE8 /* UIViewControllerExtension.swift in Sources */,
+				43A33AEA27C4246D002B3EC1 /* WalletsListViewModel.swift in Sources */,
+				43A33AD727C406E7002B3EC1 /* Wallets.swift in Sources */,
 				432441AE27C2DDCD00A78FE8 /* AssetListItemViewModel.swift in Sources */,
+				43A33AD427C4067E002B3EC1 /* RemoteWalletsAPI.swift in Sources */,
+				43A33ACD27C3D2D1002B3EC1 /* FiatWallet.swift in Sources */,
 				432441A927C2C51000A78FE8 /* CollectionExtension.swift in Sources */,
 				4324419027C246E600A78FE8 /* AssetsListDependencyContainer.swift in Sources */,
 				439B016227C1B987001D490A /* FakeRemoteAssetsAPI.swift in Sources */,
@@ -650,12 +831,19 @@
 				4324419E27C2544000A78FE8 /* AssetsListViewModel.swift in Sources */,
 				432441B027C2E9D800A78FE8 /* StringExtension.swift in Sources */,
 				432441B227C300F200A78FE8 /* BitpandaMainNavigationViewController.swift in Sources */,
+				43A33AB927C3C69F002B3EC1 /* WalletListDependencyContainer.swift in Sources */,
 				439B016427C1BECB001D490A /* BitpandaRemoteAssetsAPI.swift in Sources */,
 				439B015627C1355A001D490A /* BitpandaAssetsRepository.swift in Sources */,
 				439B016727C1C094001D490A /* BitpandaAppDependencyContainer.swift in Sources */,
 				432441AC27C2D1F200A78FE8 /* UIImageViewExtension.swift in Sources */,
 				439B016927C1C41B001D490A /* BitpandaKitError.swift in Sources */,
+				43A33AE127C40F35002B3EC1 /* BitpandaWalletsRepository.swift in Sources */,
+				43A33ADA27C407E9002B3EC1 /* BitpandaRemoteWalletsAPI.swift in Sources */,
+				43A33ACB27C3CE2C002B3EC1 /* Masterdata.swift in Sources */,
+				43A33ABD27C3C6D2002B3EC1 /* WalletListViewController.swift in Sources */,
 				439B015F27C1B8E5001D490A /* RemoteAssetsAPI.swift in Sources */,
+				43A33AE627C423C5002B3EC1 /* FiatWalletListItemTableViewCell.swift in Sources */,
+				43A33AC227C3C719002B3EC1 /* WalletListItemTableViewCell.swift in Sources */,
 				439B015327C13271001D490A /* AssetsRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
