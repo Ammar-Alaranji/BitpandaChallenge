@@ -12,9 +12,17 @@ class WalletsListViewModel {
     
     // MARK: - Properties
     let walletsRepository: WalletsRepository
+    var walletsListItem: Wallets = Wallets()
+    var fiatWalletsItems: [FiatListItemViewModel] = []
+    var commodityWalletsItems: [CommodityListItemViewModel] = []
     
     // MARK: - Binded Properties
-    var selectedSegmentIndex: Int = 0 
+    var selectedSegmentIndex: Int = 0 {
+        didSet {
+            // to notify the wallets controller to reload its tableView
+            self.walletsListSubject.send()
+        }
+    }
     
     // MARK: - Methods
     init(walletsRepository: WalletsRepository) {
@@ -27,7 +35,11 @@ class WalletsListViewModel {
     }
     private let errorMessagesSubject = PassthroughSubject<ErrorMessage, Never>()
     
-    @Published public private(set) var walletsListItem: Wallets = Wallets()
+    public var walletsListPublisher: AnyPublisher<Void, Never> {
+        walletsListSubject.eraseToAnyPublisher()
+    }
+    private let walletsListSubject = PassthroughSubject<Void, Never>()
+    
     @Published public private(set) var errorMessageLabel: String = ""
     @Published public private(set) var fetchingActivityIndicatorAnimating = false
     
@@ -38,12 +50,35 @@ class WalletsListViewModel {
         self.walletsRepository.getWallets()
             .then(on: .global()) { wallets in
                 self.walletsListItem = wallets
+                self.updateViewModelItems()
                 // Indicate finish getting data with success results
                 self.indicateFinishFetchingData()
             }.catch { error in
                 // Handle the returned error and send it with the error message publisher
                 self.indicateFetchDataError(error: error)
             }
+    }
+    
+    func updateViewModelItems() {
+        // map fiat wallets to FiatListItemViewModel
+        self.fiatWalletsItems = self.walletsListItem.fiatWallets.map({ fiatWallet in
+            
+            return FiatListItemViewModel(fiatWalet: fiatWallet)
+        }).sorted(by: { first, second in
+            return first > second
+        })
+        
+        // map wallets to CommodityListItemViewModel, then remove deleted items
+        self.commodityWalletsItems = self.walletsListItem.commodityWallets.map({ commodityWalet in
+            return CommodityListItemViewModel(commodityWalet: commodityWalet)
+        }).filter({ commodityWalet in
+            return !commodityWalet.deleted
+        }).sorted(by: { first, second in
+            return first > second
+        })
+        
+        // to notify the wallets controller to reload its tableView
+        self.walletsListSubject.send()
     }
 }
 

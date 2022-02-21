@@ -57,11 +57,12 @@ class WalletListViewController: UIViewController {
     
     private func setupTableView() {
         
-        self.tableView.estimatedRowHeight = AssetListItemTableViewCell.height
+        self.tableView.estimatedRowHeight = FiatWalletListItemTableViewCell.height
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.tableView.register(UINib(nibName: AssetListItemTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: AssetListItemTableViewCell.reuseIdentifier)
+        self.tableView.register(UINib(nibName: FiatWalletListItemTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: FiatWalletListItemTableViewCell.reuseIdentifier)
+        self.tableView.register(UINib(nibName: WalletListItemTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: WalletListItemTableViewCell.reuseIdentifier)
     }
 }
 
@@ -69,15 +70,60 @@ class WalletListViewController: UIViewController {
 extension WalletListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        // check selected segment type
+        if self.walletsListViewModel?.selectedSegmentIndex ==  SegmentTypes.wallets.rawValue {
+            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: WalletListItemTableViewCell.reuseIdentifier, for: indexPath) as? WalletListItemTableViewCell else {
+                
+                assertionFailure("Cannot dequeue reusable cell \(WalletListItemTableViewCell.self) with reuseIdentifier: \(WalletListItemTableViewCell.reuseIdentifier)")
+                return UITableViewCell()
+            }
+            
+            guard let commodityWalletsItem = self.walletsListViewModel?.commodityWalletsItems[safe: indexPath.row] else {
+                return UITableViewCell()
+            }
+            
+            cell.fill(commodityWalletsItem: commodityWalletsItem)
+            
+            return cell
+            
+        } else if self.walletsListViewModel?.selectedSegmentIndex ==  SegmentTypes.fiatsWallets.rawValue {
+            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: FiatWalletListItemTableViewCell.reuseIdentifier, for: indexPath) as? FiatWalletListItemTableViewCell else {
+                
+                assertionFailure("Cannot dequeue reusable cell \(FiatWalletListItemTableViewCell.self) with reuseIdentifier: \(FiatWalletListItemTableViewCell.reuseIdentifier)")
+                return UITableViewCell()
+            }
+            
+            guard let fiatListViewModel = self.walletsListViewModel?.fiatWalletsItems[safe: indexPath.row] else {
+                return UITableViewCell()
+            }
+            
+            cell.fill(fiatListItemViewModel: fiatListViewModel)
+            
+            return cell
+            
+        }
         return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        let numberOfRows = self.walletsListViewModel?.selectedSegmentIndex ==  SegmentTypes.wallets.rawValue ? self.walletsListViewModel?.commodityWalletsItems.count ?? 0 : self.walletsListViewModel?.fiatWalletsItems.count ?? 0
+        return numberOfRows
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 0
+         
+        var estimatedHeight: CGFloat
+        if self.walletsListViewModel?.selectedSegmentIndex ==  SegmentTypes.wallets.rawValue {
+            
+            estimatedHeight = self.walletsListViewModel?.commodityWalletsItems.isEmpty ?? true ? tableView.frame.height : UITableView.automaticDimension
+        } else {
+            
+            estimatedHeight = self.walletsListViewModel?.fiatWalletsItems.isEmpty ?? true ? tableView.frame.height : UITableView.automaticDimension
+        }
+
+        return estimatedHeight
     }
 }
 
@@ -134,7 +180,7 @@ extension WalletListViewController {
     func bindViewModelToTableView() {
         
         self.walletsListViewModel?
-            .$walletsListItem
+            .walletsListPublisher
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { [weak self] _ in
                 self?.reload()
