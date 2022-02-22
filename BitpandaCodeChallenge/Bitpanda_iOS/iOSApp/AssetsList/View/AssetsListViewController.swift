@@ -21,7 +21,7 @@ class AssetsListViewController: UIViewController {
     private var assetListViewModel: AssetsListViewModel?
     
     // MARK: - Factory method
-    static func create(assetListViewModel: AssetsListViewModel) -> UIViewController {
+    static func create(assetListViewModel: AssetsListViewModel) -> AssetsListViewController {
         
         // Create instance from AssetsListViewController
         let viewController = AssetsListViewController.init(nibName: AssetsListViewController.defaultFileName, bundle: nil)
@@ -44,6 +44,9 @@ class AssetsListViewController: UIViewController {
         self.bindViewModelToViews()
         // load data
         self.assetListViewModel?.loadAssetsData()
+        
+        let bool = self.navigationController?.isNavigationBarHidden
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     func reload() {
@@ -70,6 +73,7 @@ class AssetsListViewController: UIViewController {
     
     private func initSearchController()
         {
+            self.navigationController?.isNavigationBarHidden = true
             searchController.loadViewIfNeeded()
             searchController.searchResultsUpdater = self
             searchController.obscuresBackgroundDuringPresentation = false

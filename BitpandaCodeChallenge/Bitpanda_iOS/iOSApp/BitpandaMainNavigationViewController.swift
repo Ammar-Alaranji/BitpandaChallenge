@@ -17,3 +17,9 @@ class BitpandaMainNavigationViewController: UINavigationController {
         return navController
     }
 }
+
+protocol MainNavigationViewControllerFactory {
+    
+    // MARK: - Factory Methods
+    func makeMainNavigationViewController() -> UINavigationController
+}

@@ -55,6 +55,8 @@
 		43A33AEA27C4246D002B3EC1 /* WalletsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A33AE927C4246D002B3EC1 /* WalletsListViewModel.swift */; };
 		43A33AED27C44674002B3EC1 /* FiatListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A33AEC27C44674002B3EC1 /* FiatListItemViewModel.swift */; };
 		43A33AEF27C4493B002B3EC1 /* CommodityListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A33AEE27C4493B002B3EC1 /* CommodityListItemViewModel.swift */; };
+		43A33AF527C52809002B3EC1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A33AF327C52808002B3EC1 /* MainViewController.swift */; };
+		43A33AF627C52809002B3EC1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43A33AF427C52808002B3EC1 /* MainViewController.xib */; };
 		63F5A190997C5645E6E5C03F /* Pods_BitpandaCodeChallenge_BitpandaCodeChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94346039C5C2A3855B68DFF9 /* Pods_BitpandaCodeChallenge_BitpandaCodeChallengeUITests.framework */; };
 		695FF92A5ADE01567774A802 /* Pods_BitpandaCodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD800F2F0306276A52DA89D7 /* Pods_BitpandaCodeChallenge.framework */; };
 		90C269850B65B4AC3CF3AAA8 /* Pods_BitpandaCodeChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00256AC69F1689086314FBFD /* Pods_BitpandaCodeChallengeTests.framework */; };
@@ -132,6 +134,8 @@
 		43A33AE927C4246D002B3EC1 /* WalletsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsListViewModel.swift; sourceTree = "<group>"; };
 		43A33AEC27C44674002B3EC1 /* FiatListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatListItemViewModel.swift; sourceTree = "<group>"; };
 		43A33AEE27C4493B002B3EC1 /* CommodityListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommodityListItemViewModel.swift; sourceTree = "<group>"; };
+		43A33AF327C52808002B3EC1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		43A33AF427C52808002B3EC1 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		60E031271D5CC8E4A18A8840 /* Pods-BitpandaCodeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitpandaCodeChallenge.debug.xcconfig"; path = "Target Support Files/Pods-BitpandaCodeChallenge/Pods-BitpandaCodeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		94346039C5C2A3855B68DFF9 /* Pods_BitpandaCodeChallenge_BitpandaCodeChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitpandaCodeChallenge_BitpandaCodeChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F168FE567C23AE17D819640 /* Pods-BitpandaCodeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitpandaCodeChallenge.release.xcconfig"; path = "Target Support Files/Pods-BitpandaCodeChallenge/Pods-BitpandaCodeChallenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 			children = (
 				439B016627C1C094001D490A /* BitpandaAppDependencyContainer.swift */,
 				432441B127C300F100A78FE8 /* BitpandaMainNavigationViewController.swift */,
+				43A33AF227C52738002B3EC1 /* Main View */,
 				4324418E27C2469D00A78FE8 /* AssetsList */,
 				43A33AB627C3C61C002B3EC1 /* WalletList */,
 			);
@@ -549,6 +554,15 @@
 			path = Wallets;
 			sourceTree = "<group>";
 		};
+		43A33AF227C52738002B3EC1 /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				43A33AF327C52808002B3EC1 /* MainViewController.swift */,
+				43A33AF427C52808002B3EC1 /* MainViewController.xib */,
+			);
+			path = "Main View";
+			sourceTree = "<group>";
+		};
 		456DBEBA57C31ACEE94B911B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -688,6 +702,7 @@
 				439B015927C13C86001D490A /* Masterdata.json in Resources */,
 				43A33AE727C423C5002B3EC1 /* FiatWalletListItemTableViewCell.xib in Resources */,
 				439B016B27C1C627001D490A /* Main.storyboard in Resources */,
+				43A33AF627C52809002B3EC1 /* MainViewController.xib in Resources */,
 				4324419427C24FB700A78FE8 /* AssetsListViewController.xib in Resources */,
 				43A33AC327C3C719002B3EC1 /* WalletListItemTableViewCell.xib in Resources */,
 			);
@@ -838,6 +853,7 @@
 				4324419E27C2544000A78FE8 /* AssetsListViewModel.swift in Sources */,
 				432441B027C2E9D800A78FE8 /* StringExtension.swift in Sources */,
 				432441B227C300F200A78FE8 /* BitpandaMainNavigationViewController.swift in Sources */,
+				43A33AF527C52809002B3EC1 /* MainViewController.swift in Sources */,
 				43A33AB927C3C69F002B3EC1 /* WalletListDependencyContainer.swift in Sources */,
 				43A33AED27C44674002B3EC1 /* FiatListItemViewModel.swift in Sources */,
 				439B016427C1BECB001D490A /* BitpandaRemoteAssetsAPI.swift in Sources */,

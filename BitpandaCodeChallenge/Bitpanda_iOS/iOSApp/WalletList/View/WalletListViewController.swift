@@ -21,7 +21,7 @@ class WalletListViewController: UIViewController {
     var walletsListViewModel: WalletsListViewModel?
     
     // MARK: - Factory method
-    static func create(walletsListViewModel: WalletsListViewModel) -> UIViewController {
+    static func create(walletsListViewModel: WalletsListViewModel) -> WalletListViewController {
         
         // Create instance from AssetsListViewController
         let viewController = WalletListViewController.init(nibName: WalletListViewController.defaultFileName, bundle: nil)

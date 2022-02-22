@@ -11,10 +11,9 @@ class WalletListDependencyContainer {
     
     // MARK: - Properties
     private let sharedWalletsSessionRepository: WalletsRepository
-    private let bitpandaNavigation: BitpandaNavigation
     
     // MARK: - Methods
-    init(bitpandaNavigation: BitpandaNavigation) {
+    init() {
         
         func makeWalletsSessionRepository() -> WalletsRepository {
                 
@@ -31,20 +30,17 @@ class WalletListDependencyContainer {
             #endif
         }
         
-        self.bitpandaNavigation = bitpandaNavigation
         self.sharedWalletsSessionRepository = makeWalletsSessionRepository()
     }
 
     // MARK: - Factory Methods
     // Create WalletListViewController
-    func makeWalletListViewController() -> UIViewController {
+    func makeWalletListViewController() -> WalletListViewController {
         
         let walletsViewModel = self.makeWalletsListViewModel()
-        let navigation = self.bitpandaNavigation.makeMainNavigationViewController()
         let walletListViewController = WalletListViewController.create(walletsListViewModel: walletsViewModel)
         
-        navigation.setViewControllers([walletListViewController], animated: false)
-        return navigation
+        return walletListViewController
     }
     
     private func makeWalletsListViewModel() -> WalletsListViewModel {

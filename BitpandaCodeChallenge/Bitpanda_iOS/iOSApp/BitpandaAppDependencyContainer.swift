@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class BitpandaAppDependencyContainer: BitpandaNavigation {
+class BitpandaAppDependencyContainer {
     
     // MARK: - Properties
     var navigationFactory: ((BitpandaMainNavigationViewController) -> Void)?
@@ -16,14 +16,28 @@ class BitpandaAppDependencyContainer: BitpandaNavigation {
     // MARK: - Methods
     
     // MARK: - Factory Methods
+    // Create MainViewController
+    func makeMainViewController() -> UIViewController {
+        
+        let navigation = self.makeMainNavigationViewController()
+        let assetsListViewController = self.makeAssetsListViewController()
+        let walletsListViewControler = self.makeWalletListViewController()
+        
+        let mainViewController = MainViewController.create(assetsListViewController: assetsListViewController, walletsListViewControler: walletsListViewControler)
+        
+        navigation.setViewControllers([mainViewController], animated: false)
+        return navigation
+    }
     func makeMainNavigationViewController() -> UINavigationController {
                 
         return BitpandaMainNavigationViewController.create()
     }
-}
- 
-protocol BitpandaNavigation {
     
-    // MARK: - Factory Methods
-    func makeMainNavigationViewController() -> UINavigationController
+    func makeAssetsListViewController() -> UIViewController {
+        return AssetsListDependencyContainer().makeAssetsListViewController()
+    }
+    
+    func makeWalletListViewController() -> WalletListViewController {
+        return WalletListDependencyContainer().makeWalletListViewController()
+    }
 }
