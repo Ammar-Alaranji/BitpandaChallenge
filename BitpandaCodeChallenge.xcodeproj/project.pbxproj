@@ -1044,7 +1044,7 @@
 				DEVELOPMENT_TEAM = EE6W939978;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BitpandaCodeChallenge/Application/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Bitpanda Challabge";
+				INFOPLIST_KEY_CFBundleDisplayName = Bitpanda;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
@@ -1077,7 +1077,7 @@
 				DEVELOPMENT_TEAM = EE6W939978;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BitpandaCodeChallenge/Application/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Bitpanda Challabge";
+				INFOPLIST_KEY_CFBundleDisplayName = Bitpanda;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
