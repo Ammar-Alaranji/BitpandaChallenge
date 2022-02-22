@@ -45,7 +45,6 @@ class AssetsListViewController: UIViewController {
         // load data
         self.assetListViewModel?.loadAssetsData()
         
-        let bool = self.navigationController?.isNavigationBarHidden
         self.navigationController?.isNavigationBarHidden = false
     }
     
