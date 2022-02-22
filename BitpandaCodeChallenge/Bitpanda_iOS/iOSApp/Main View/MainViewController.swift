@@ -42,10 +42,10 @@ class MainViewController: UITabBarController {
            let walletController = self.walletsListViewControler {
             // Setup asset tab bar item
             assetController.tabBarItem.title = NSLocalizedString("Assets", comment: "Asset tab bar item title")
-            assetController.tabBarItem.image = UIImage(named: "placeHolder")
+            assetController.tabBarItem.image = UIImage(named: "assets")?.withTintColor(UIColor.gray)
             
             walletController.tabBarItem.title = NSLocalizedString("Wallets", comment: "Wallets tab bar item title")
-            walletController.tabBarItem.image = UIImage(named: "fiatWallet")
+            walletController.tabBarItem.image = UIImage(named: "wallets")?.withTintColor(UIColor.gray)
             
             self.viewControllers = [assetController, walletController]
             self.selectedIndex = 0
