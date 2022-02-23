@@ -52,11 +52,9 @@ class AssetsListViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = false
     }
     
-    func reload(withAnimation: Bool) {
+    func reload() {
         tableView.reloadData()
-        if withAnimation {
-            self.tableView.animate(animation: .left(duration: self.tableViewAnimationSpeed), completion: nil)
-        }
+        self.tableView.animate(animation: .left(duration: self.tableViewAnimationSpeed), completion: nil)
     }
     
     // MARK: - Private
@@ -177,8 +175,8 @@ extension AssetsListViewController {
         self.assetListViewModel?
             .AssetsListPublisher
             .receive(on: DispatchQueue.main)
-            .sink(receiveValue: { [weak self] shouldAnimate in
-                self?.reload(withAnimation: shouldAnimate)
+            .sink(receiveValue: { [weak self] _ in
+                self?.reload()
             })
             .store(in: &subscriptions)
     }

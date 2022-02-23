@@ -31,10 +31,10 @@ class AssetsListViewModel {
     }
     private let errorMessagesSubject = PassthroughSubject<ErrorMessage, Never>()
     
-    public var AssetsListPublisher: AnyPublisher<Bool, Never> {
+    public var AssetsListPublisher: AnyPublisher<Void, Never> {
         assetsListSubject.eraseToAnyPublisher()
     }
-    private let assetsListSubject = PassthroughSubject<Bool, Never>()
+    private let assetsListSubject = PassthroughSubject<Void, Never>()
     
     @Published public private(set) var searchBarButtonTitles: [String] = []
     @Published public private(set) var errorMessageLabel: String = ""
@@ -80,7 +80,7 @@ class AssetsListViewModel {
         self.allAssetsList = self.assetsListItems
         
         // to notify the wallets controller to reload its tableView
-        self.assetsListSubject.send(true)
+        self.assetsListSubject.send()
     }
     
     func applyFilter(searchText: String, appliedFilter: String = "All", searchIsActive: Bool) {
@@ -106,7 +106,7 @@ class AssetsListViewModel {
             }
         }
         
-        self.assetsListSubject.send(searchIsActive)
+        self.assetsListSubject.send()
     }
 }
 
