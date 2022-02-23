@@ -7,20 +7,16 @@
 
 import Foundation
 
-struct Masterdata: Codable {
+struct Masterdata {
     let data: DataAttribute
 }
 
-struct DataAttribute : Codable {
+struct DataAttribute {
     let type: String
     let attributes: Attributes
 }
 
-struct Attributes: Codable {
-    enum CodingKeys: String, CodingKey {
-        case cryptocoins, commodities, fiats, wallets, fiatwallets
-        case commodityWallets = "commodity_wallets"
-    }
+struct Attributes {
     let cryptocoins: [Asset]
     let commodities: [Asset]
     let fiats: [Asset]

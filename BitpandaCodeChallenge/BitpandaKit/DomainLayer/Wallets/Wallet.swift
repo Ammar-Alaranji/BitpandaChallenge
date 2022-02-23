@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Wallet: Codable {
+struct Wallet {
     typealias Identifier = String
-    enum WalletType: String, Codable {
+    enum WalletType: String {
         case wallet
         case fiatWallet = "fiat_wallet"
     }
@@ -20,13 +20,6 @@ struct Wallet: Codable {
 }
 
 struct WalletAttribute: Codable {
-    private enum CodingKeys: String, CodingKey {
-        case name, balance, deleted
-        case cryptocoinId = "cryptocoin_id"
-        case cryptocoinSymbol = "cryptocoin_symbol"
-        case isDefault = "is_default"
-    }
-
     let name: String
     let balance: String
     let cryptocoinId: String

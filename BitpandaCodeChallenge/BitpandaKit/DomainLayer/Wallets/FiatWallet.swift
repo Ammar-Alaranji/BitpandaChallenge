@@ -7,11 +7,9 @@
 
 import Foundation
 
-import Foundation
-
-struct FiatWallet: Codable {
+struct FiatWallet {
     typealias Identifier = String
-    enum FiatWalletType: String, Codable {
+    enum FiatWalletType: String {
         case wallet
         case fiatWallet = "fiat_wallet"
     }
@@ -21,13 +19,7 @@ struct FiatWallet: Codable {
     let attributes: FiatWalletAttribute
 }
 
-struct FiatWalletAttribute: Codable {
-    private enum CodingKeys: String, CodingKey {
-        case name, balance
-        case fiatId = "fiat_id"
-        case fiatSymbol = "fiat_symbol"
-    }
-
+struct FiatWalletAttribute {
     let name: String
     let balance: String
     let fiatId: String

@@ -85,6 +85,7 @@ class AssetsListViewController: UIViewController {
             searchController.searchBar.scopeButtonTitles = self.assetListViewModel?.searchBarButtonTitles
             searchController.searchBar.selectedScopeButtonIndex = 0
             searchController.searchBar.delegate = self
+            searchController.searchBar.searchTextField.accessibilityIdentifier = AccessibilityIdentifier.assetsSearchField
         }
 }
 

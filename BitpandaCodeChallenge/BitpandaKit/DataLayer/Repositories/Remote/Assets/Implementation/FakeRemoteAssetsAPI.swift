@@ -17,8 +17,8 @@ struct FakeRemoteAssetsAPI: RemoteAssetsAPI {
                 if let bundlePath = Bundle.main.path(forResource: "Masterdata",
                                                      ofType: "json"),
                    let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
-                    let masterdata = try JSONDecoder().decode(Masterdata.self, from: jsonData)
-                    fulfill(masterdata.data.attributes)
+                    let masterdata = try JSONDecoder().decode(MasterdataDTO.self, from: jsonData)
+                    fulfill(masterdata.data.attributes.toDomain())
                 }
             } catch {
                 return reject(error)

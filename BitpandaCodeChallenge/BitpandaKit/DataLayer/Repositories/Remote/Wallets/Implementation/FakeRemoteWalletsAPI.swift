@@ -18,11 +18,12 @@ class FakeRemoteWalletsAPI: RemoteWalletsAPI {
                 if let bundlePath = Bundle.main.path(forResource: "Masterdata",
                                                      ofType: "json"),
                    let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
-                    let masterdata = try JSONDecoder().decode(Masterdata.self, from: jsonData)
+                    let masterdata = try JSONDecoder().decode(MasterdataDTO.self, from: jsonData)
                     
                     // Declare a new Wallet object
                     // Fill Wallets with returned data from the masterdata ogject
-                    let wallets = Wallets(fiatWallets: masterdata.data.attributes.fiatwallets ,commodityWallets: masterdata.data.attributes.wallets + masterdata.data.attributes.commodityWallets)
+                    let wallets = Wallets(fiatWallets: masterdata.data.attributes.toDomain().fiatwallets,
+                                          commodityWallets: masterdata.data.attributes.toDomain().wallets + masterdata.data.attributes.toDomain().commodityWallets)
                     fulfill(wallets)
                 }
             } catch {

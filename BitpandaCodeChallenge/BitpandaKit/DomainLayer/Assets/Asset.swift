@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Asset: Codable {
+struct Asset {
     typealias Identifier = String
-    enum AssetType: String, Codable {
+    enum AssetType: String {
         case cryptocoin
         case commodity
         case fiat
@@ -20,16 +20,7 @@ struct Asset: Codable {
     let attributes: AssetAttributes
 }
 
-struct AssetAttributes: Codable {
-
-    private enum CodingKeys: String, CodingKey {
-        case symbol, name
-        case icon = "logo"
-        case iconDark = "logo_dark"
-        case hasWalet = "has_wallets"
-        case averagePrice = "avg_price"
-        case percesionForFiatPrice = "precision_for_fiat_price"
-    }
+struct AssetAttributes {
 
     let symbol: String
     let name: String
