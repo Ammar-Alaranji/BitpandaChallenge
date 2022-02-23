@@ -11,17 +11,18 @@ class WalletListDependencyContainer {
     
     // MARK: - Properties
     private let sharedWalletsSessionRepository: WalletsRepository
+    private let sharedAssetSessionRepository: AssetsRepository
     
     // MARK: - Methods
     init() {
         
         func makeWalletsSessionRepository() -> WalletsRepository {
                 
-            let remoteWalletsAPI = makeRemoteAPI()
+            let remoteWalletsAPI = makeWalletRemoteAPI()
             return BitpandaWalletsRepository(remoteWalletsAPI: remoteWalletsAPI)
         }
         
-        func makeRemoteAPI() -> RemoteWalletsAPI {
+        func makeWalletRemoteAPI() -> RemoteWalletsAPI {
             
             #if ASSETS_SESSION_DATASTORE_LOCALFILE
                 return FakeRemoteWalletsAPI()
@@ -29,6 +30,23 @@ class WalletListDependencyContainer {
                 return BitpandaRemoteWalletsAPI()
             #endif
         }
+        
+        func makeAssetSessionRepository() -> AssetsRepository {
+                
+            let remoteAssetsAPI = makeRemoteAssetAPI()
+            return BitpandaAssetsRepository(remoteAssetsAPI: remoteAssetsAPI)
+        }
+        
+        func makeRemoteAssetAPI() -> RemoteAssetsAPI {
+            
+            #if ASSETS_SESSION_DATASTORE_LOCALFILE
+                return FakeRemoteAssetsAPI()
+            #else
+                return BitpandaRemoteAssetsAPI()
+            #endif
+        }
+        
+        self.sharedAssetSessionRepository = makeAssetSessionRepository()
         
         self.sharedWalletsSessionRepository = makeWalletsSessionRepository()
     }
@@ -44,6 +62,6 @@ class WalletListDependencyContainer {
     }
     
     private func makeWalletsListViewModel() -> WalletsListViewModel {
-        return WalletsListViewModel(walletsRepository: self.sharedWalletsSessionRepository)
+        return WalletsListViewModel(walletsRepository: self.sharedWalletsSessionRepository, assetRepository: self.sharedAssetSessionRepository)
     }
 }

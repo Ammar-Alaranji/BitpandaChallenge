@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import TableFlip
 
 class WalletListViewController: UIViewController {
 
@@ -15,6 +16,9 @@ class WalletListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var fetchDataIndicator: UIActivityIndicatorView!
     @IBOutlet weak var errorMessageLabel: UILabel!
+    
+    // MARK: - Attributes
+    let tableViewAnimationSpeed: TimeInterval = 0.5
     
     // MARK: - Dependencies
     var subscriptions = Set<AnyCancellable>()
@@ -44,6 +48,7 @@ class WalletListViewController: UIViewController {
     
     func reload() {
         self.tableView.reloadData()
+        self.tableView.animate(animation: .left(duration: self.tableViewAnimationSpeed), completion: nil)
     }
     
     // MARK: - Private

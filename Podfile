@@ -7,6 +7,7 @@ target 'BitpandaCodeChallenge' do
   pod 'PromisesSwift'
   pod 'Kingfisher'
   pod 'SVGKit'
+  pod 'TableFlip'
 
   target 'BitpandaCodeChallengeTests' do
     inherit! :search_paths

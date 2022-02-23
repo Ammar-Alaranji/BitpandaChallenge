@@ -27,10 +27,14 @@ class WalletListItemTableViewCell: UITableViewCell {
     
     func fill(commodityWalletsItem: CommodityListItemViewModel) {
         self.iconImageView.isHidden = !commodityWalletsItem.isDefault
+        // Fill wallet's name
         self.nameLabel.text = commodityWalletsItem.name
+        // Fill wallet's balance
         self.balance.text = commodityWalletsItem.balance.currency(maximumFractionDigits: nil)
+        // Fill wallet'scrypto symbol
         self.symbolLabel.text = commodityWalletsItem.cryptoSymbol
-        self.symbolImageView.isHidden = true
+        // Fill wallet's cryptoIcon icon
+        self.symbolImageView.downloadedsvg(from: commodityWalletsItem.cryptoIcon, withPlaceHolder: UIImage(named: "placeHolder"))
         
     }
     

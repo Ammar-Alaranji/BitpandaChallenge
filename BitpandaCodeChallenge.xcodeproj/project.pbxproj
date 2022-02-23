@@ -485,9 +485,9 @@
 		43A33ACE27C3D9F9002B3EC1 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				43A6F02F27C6BF9200750EF8 /* DataMapping */,
 				439B015227C13270001D490A /* AssetsRepository.swift */,
 				439B015527C1355A001D490A /* BitpandaAssetsRepository.swift */,
+				43A6F02F27C6BF9200750EF8 /* DataMapping */,
 			);
 			path = Assets;
 			sourceTree = "<group>";

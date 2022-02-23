@@ -27,11 +27,13 @@ class FiatWalletListItemTableViewCell: UITableViewCell {
     
     func fill(fiatListItemViewModel: FiatListItemViewModel) {
         
-        // Fill name and symbol details
+        // Fill fiat wallet's name and symbol details
         self.nameLabel.text = fiatListItemViewModel.name
-        // Fill average price details
+        // Fill fiat wallet's average price details
         self.balance.text = fiatListItemViewModel.balance
-        // Fill fiat symbol details
+        // Fill fiat wallet's fiat symbol details
         self.symbolLabel.text = fiatListItemViewModel.fiatSymbol
+        // Fill fiat wallet's fiat icon
+        self.symbolImageView.downloadedsvg(from: fiatListItemViewModel.fiatIcon, withPlaceHolder: UIImage(named: "placeHolder"))
     }
 }

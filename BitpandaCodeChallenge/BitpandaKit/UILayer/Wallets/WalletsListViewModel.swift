@@ -12,6 +12,7 @@ class WalletsListViewModel {
     
     // MARK: - Properties
     let walletsRepository: WalletsRepository
+    let assetRepository: AssetsRepository
     var walletsListItem: Wallets = Wallets()
     var fiatWalletsItems: [FiatListItemViewModel] = []
     var commodityWalletsItems: [CommodityListItemViewModel] = []
@@ -25,8 +26,10 @@ class WalletsListViewModel {
     }
     
     // MARK: - Methods
-    init(walletsRepository: WalletsRepository) {
+    init(walletsRepository: WalletsRepository,
+         assetRepository: AssetsRepository) {
         self.walletsRepository = walletsRepository
+        self.assetRepository = assetRepository
     }
     
     // MARK: - Publishers
@@ -49,28 +52,42 @@ class WalletsListViewModel {
         // Handle the promise result/error
         self.walletsRepository.getWallets()
             .then(on: .global()) { wallets in
-                self.walletsListItem = wallets
-                self.updateViewModelItems()
-                // Indicate finish getting data with success results
-                self.indicateFinishFetchingData()
+                // fetch assets data
+                self.assetRepository.fetchAssets()
+                    .then(on: .global()) { assets in
+                        self.walletsListItem = wallets
+                        // update view model items
+                        self.updateViewModelItems(assets: assets)
+                        // Indicate finish getting data with success results
+                        self.indicateFinishFetchingData()
+                    }
+                    .catch { error in
+                        self.indicateFetchDataError(error: error)
+                    }
             }.catch { error in
                 // Handle the returned error and send it with the error message publisher
                 self.indicateFetchDataError(error: error)
             }
     }
     
-    func updateViewModelItems() {
+    func updateViewModelItems(assets: [Asset]) {
         // map fiat wallets to FiatListItemViewModel
         self.fiatWalletsItems = self.walletsListItem.fiatWallets.map({ fiatWallet in
             
-            return FiatListItemViewModel(fiatWalet: fiatWallet)
+            let matchedAsset = assets.first { asset in
+                asset.id == fiatWallet.attributes.fiatId
+            }
+            return FiatListItemViewModel(fiatWalet: fiatWallet, fiatIcon: matchedAsset?.attributes.icon ?? URL(fileURLWithPath: ""))
         }).sorted(by: { first, second in
             return first > second
         })
         
         // map wallets to CommodityListItemViewModel, then remove deleted items
         self.commodityWalletsItems = self.walletsListItem.commodityWallets.map({ commodityWalet in
-            return CommodityListItemViewModel(commodityWalet: commodityWalet)
+            let matchedAsset = assets.first { asset in
+                asset.id == commodityWalet.attributes.cryptocoinId
+            }
+            return CommodityListItemViewModel(commodityWalet: commodityWalet, cryptoIcon: matchedAsset?.attributes.icon ?? URL(fileURLWithPath: ""))
         }).filter({ commodityWalet in
             return !commodityWalet.deleted
         }).sorted(by: { first, second in

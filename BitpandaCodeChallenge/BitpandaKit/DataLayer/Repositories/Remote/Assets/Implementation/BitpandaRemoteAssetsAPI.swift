@@ -12,8 +12,8 @@ import Promises
 
 // Add the methodes to get the data from the Bitpanda cloud service APIs
 class BitpandaRemoteAssetsAPI: RemoteAssetsAPI {
-    func fetchAssets() -> Promise<Attributes> {
-        return Promise<Attributes>{ fulfill, reject in
+    func fetchAssets() -> Promise<[Asset]> {
+        return Promise<[Asset]>{ fulfill, reject in
             
             reject(BitpandaKitError.remoteAPINotAvailalbe)
         }

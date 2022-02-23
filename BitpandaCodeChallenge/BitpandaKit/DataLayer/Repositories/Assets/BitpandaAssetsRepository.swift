@@ -19,7 +19,7 @@ final class BitpandaAssetsRepository: AssetsRepository {
     }
     
     // MARK: - Implementaion
-    func fetchAssets() -> Promise<Attributes> {
+    func fetchAssets() -> Promise<[Asset]> {
         return self.remoteAssetsAPI.fetchAssets()
     }
 }

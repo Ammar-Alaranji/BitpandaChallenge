@@ -9,5 +9,5 @@ import Foundation
 import Promises
 
 protocol RemoteAssetsAPI {
-    func fetchAssets() -> Promise<Attributes>
+    func fetchAssets() -> Promise<[Asset]>
 }

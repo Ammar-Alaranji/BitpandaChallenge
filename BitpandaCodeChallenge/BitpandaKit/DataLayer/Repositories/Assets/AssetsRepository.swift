@@ -10,5 +10,5 @@ import Promises
 
 protocol AssetsRepository {
     
-    func fetchAssets() -> Promise<Attributes>
+    func fetchAssets() -> Promise<[Asset]>
 }

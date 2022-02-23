@@ -16,9 +16,9 @@ class FiatListItemViewModel {
     var formattedBalance: String
     var balance: String
     
-    init(fiatWalet: FiatWallet) {
+    init(fiatWalet: FiatWallet, fiatIcon: URL) {
         
-        self.fiatIcon = URL(fileURLWithPath: "")
+        self.fiatIcon = fiatIcon
         self.fiatSymbol = fiatWalet.attributes.fiatSymbol
         self.name = fiatWalet.attributes.name
         self.formattedBalance = fiatWalet.attributes.balance.currency(maximumFractionDigits: nil)

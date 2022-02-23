@@ -15,6 +15,7 @@ class AssetsListViewModel {
     var isEmpty: Bool { return self.assetsListItems.isEmpty }
     var searchBarButtonTitlesSet: Set<String> = []
     var allAssetsList: [AssetListItemViewModel] = []
+    var assetsListItems: [AssetListItemViewModel] = []
     
     // MARK: - Binded Properties
     var isSearchBarActive: Bool = false
@@ -30,8 +31,12 @@ class AssetsListViewModel {
     }
     private let errorMessagesSubject = PassthroughSubject<ErrorMessage, Never>()
     
+    public var AssetsListPublisher: AnyPublisher<Bool, Never> {
+        assetsListSubject.eraseToAnyPublisher()
+    }
+    private let assetsListSubject = PassthroughSubject<Bool, Never>()
+    
     @Published public private(set) var searchBarButtonTitles: [String] = []
-    @Published public private(set) var assetsListItems: [AssetListItemViewModel] = []
     @Published public private(set) var errorMessageLabel: String = ""
     @Published public private(set) var fetchingActivityIndicatorAnimating = false
     
@@ -40,9 +45,9 @@ class AssetsListViewModel {
         self.indicateFetchingData()
         self.assetsRepository.fetchAssets()
         // Handle the promise result/error
-            .then(on: .main) { attributes in
+            .then(on: .main) { assets in
                 // fill the view model items array with the assets attributes
-                self.groupAssetsAttributes(attributes: attributes)
+                self.groupAssetsAttributes(assets: assets)
                 // Indicate finish getting data with success results
                 self.indicateFinishFetchingData()
             }.catch(on: .main) { error in
@@ -52,13 +57,12 @@ class AssetsListViewModel {
     }
     
     // Group assets attributes to one list
-    func groupAssetsAttributes(attributes: Attributes) {
+    func groupAssetsAttributes(assets: [Asset]) {
         var tempListItem: [Asset] = []
-        tempListItem.append(contentsOf: attributes.cryptocoins)
-        tempListItem.append(contentsOf: attributes.commodities)
-        // Filter the fiat list and onlt include the fiat with has wallet true
-        tempListItem.append(contentsOf: attributes.fiats.filter({ fiat in
-            return fiat.attributes.hasWalet ?? false
+        // Get all cryptocoins and commodities, only fiats that has wallet true value
+        tempListItem.append(contentsOf: assets.filter({ asset in
+             
+            return (asset.type == .fiat && asset.attributes.hasWalet ?? false) || (asset.type != .fiat)
         }))
         
         // Map the Assets array to AssetListItemViewModel array
@@ -74,6 +78,9 @@ class AssetsListViewModel {
             return firstAssetType < secondAssetType
         })
         self.allAssetsList = self.assetsListItems
+        
+        // to notify the wallets controller to reload its tableView
+        self.assetsListSubject.send(true)
     }
     
     func applyFilter(searchText: String, appliedFilter: String = "All", searchIsActive: Bool) {
@@ -98,6 +105,8 @@ class AssetsListViewModel {
                 return filterPredicat
             }
         }
+        
+        self.assetsListSubject.send(searchIsActive)
     }
 }
 

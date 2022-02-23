@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import TableFlip
 
 class AssetsListViewController: UIViewController {
 
@@ -15,6 +16,9 @@ class AssetsListViewController: UIViewController {
     @IBOutlet weak var errorMessageLabel: UILabel!
     @IBOutlet weak var fetchDataActivityIndicator: UIActivityIndicatorView!
     let searchController = UISearchController()
+    
+    // MARK: - Attributes
+    let tableViewAnimationSpeed: TimeInterval = 0.5
     
     // MARK: - Dependencies
     var subscriptions = Set<AnyCancellable>()
@@ -48,8 +52,11 @@ class AssetsListViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = false
     }
     
-    func reload() {
+    func reload(withAnimation: Bool) {
         tableView.reloadData()
+        if withAnimation {
+            self.tableView.animate(animation: .left(duration: self.tableViewAnimationSpeed), completion: nil)
+        }
     }
     
     // MARK: - Private
@@ -168,10 +175,10 @@ extension AssetsListViewController {
     func bindViewModelToTableView() {
         
         self.assetListViewModel?
-            .$assetsListItems
+            .AssetsListPublisher
             .receive(on: DispatchQueue.main)
-            .sink(receiveValue: { [weak self] assets in
-                self?.reload()
+            .sink(receiveValue: { [weak self] shouldAnimate in
+                self?.reload(withAnimation: shouldAnimate)
             })
             .store(in: &subscriptions)
     }

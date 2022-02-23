@@ -18,9 +18,9 @@ class CommodityListItemViewModel {
     var isDefault: Bool
     var deleted: Bool
     
-    init(commodityWalet: Wallet) {
+    init(commodityWalet: Wallet, cryptoIcon: URL) {
         
-        self.cryptoIcon = URL(fileURLWithPath: "")
+        self.cryptoIcon = cryptoIcon
         self.cryptoSymbol = commodityWalet.attributes.cryptocoinSymbol
         self.name = commodityWalet.attributes.name
         self.formattedBalance = commodityWalet.attributes.balance.currency(maximumFractionDigits: nil)
