@@ -1152,7 +1152,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ECCF71FC21757C1458A81474 /* Pods-BitpandaCodeChallengeTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1178,7 +1178,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AC3EE842565FBF70F37D6922 /* Pods-BitpandaCodeChallengeTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1204,7 +1204,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DFE0574821D6174BBD511D38 /* Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = EE6W939978;
@@ -1228,7 +1228,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 206791F017D5DEDD4EE85980 /* Pods-BitpandaCodeChallenge-BitpandaCodeChallengeUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = EE6W939978;
