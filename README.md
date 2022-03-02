@@ -1,197 +1,164 @@
+
 <div id="top"></div>
-[![Stargazers][stars-shield]][stars-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- TABLE OF CONTENTS -->
+
 <details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
+
+<summary>Table of Contents</summary>
+
+<ol>
+
+<li>
+
+<a href="#about-the-project">About The Project</a>
+
+<ul>
+
+<li><a href="#built-with">Built With</a></li>
+
+</ul>
+
+</li>
+
+<li>
+
+<a href="#getting-started">Getting Started</a>
+
+<ul>
+
+<li><a href="#prerequisites">Prerequisites</a></li>
+
+<li><a href="#installation">Installation</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="#usage">Usage</a></li>
+
+<li><a href="#roadmap">Roadmap</a></li>
+
+<li><a href="#contributing">Contributing</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+<li><a href="#acknowledgments">Acknowledgments</a></li>
+
+</ol>
+
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
-## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+##  About The Project
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+Shortly will provide you with a greate tool to utlize the power of [shortco.app](https://shortco.app/), you will be able to easily enter any valid link, and the shortly will shotening it for you, and save your results and give you the ability to use them for later with one click to copy, and delete not needed old results when you don't wan them anymore, happy shortnening :smile:
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+###  Built With
 
-
-### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* Xcode 13.0
+* Target platform version: iOS 13
+* macOS Big Sur version 11.4
+* Reactive using Comine 
+* Handle asynchronous tasks and results with Promise Kit
+* Alamofile to handle the backend API
+* UserDefaults to persist the data
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
-## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+##  Getting Started
 
-### Prerequisites
+###  Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Before run the project you need to make sure that you have Pod installed on your device, you can download it using the below command:
 
-### Installation
+* CocoaPods
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+```sh
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+$ sudo gem install cocoapods
 
+```
+
+###  Installation
+
+After you installed the CocoaPods, you can proceed and install the required dependencies of the project:
+
+1. Open terminal app on your device
+
+2. Go to the project main directory
+
+```sh
+
+cd your_main_directory_path/Shortly\ Challeng
+
+```
+
+3. Run pod install
+
+```sh
+
+pod install
+
+```
+
+4. Open project workspace file
+
+5. You are don, you can run the application now
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- USAGE EXAMPLES -->
-## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+##  Used Technologies
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+The used archeticture that I used in the project is MVVM, it can provide a juge flexibility, separate between models and views, apply the reactive programming by controling all the interactions and handling models in the ViewModels.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+Dependency Pattern:
+Dependency Injection pattern was used here to  manage the app shared Repositories and ViewModels.
 
+Design Pattern:
+Repository was used to provide a facade design pattern to help fetching data from the cloud service endpoints and to store the data on the local device storage.
 
+Reactive programming: 
+Comine was the method used to apply it, I prefer to use Combine over other tools or third libraries is because it is provided by apple, it's applied on the level of foundation and UIKit, so anything you may use from those two Appld Kits will be supported, Apple has access to all public and private functions and attributes in their libraries, so it will be able to apply the reacitve with more powerful that any other third parties that will have linit access to Apple libraries' components.
 
-<!-- ROADMAP -->
-## Roadmap
+Asynchronous and handling results:
+Promise kit will shine up here, it can provide a lot of poweful options and possiblities, from chainig the requests, and get rid of the boiledcode that you need to wrote to handle the results, delegates and completion handles.
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+Domain Layer:
+I created a domain layer, and specific data layer for each data source, for the RemoteAPI we used DTOs, for the UserDefaults persist storage, we used UDS.
+This approach will help you let the ViewModel only handle one Model, and any change that could affect the DTOs or UDS will not affect the ViewModel, because we have a mapping functions that should know how to apply and create Domain models from DTOs or UDSs.
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+ViewModel Abstraction:
+When we abstract the ViewModel, we can use different implementation of the same ViewModel, and we can use that later on with UnitTesting the ViewModel by creating Mock data implementation and test the needed cases and scenarios.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- CONTACT -->
-## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+##  Contact
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Ammar Alaranji - [LinkedIn](https://www.linkedin.com/in/ammar-al-aranji-5a5951190/) - ammararangy@gmail.com
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+
+##  Acknowledgments
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+* [Alamofire](https://github.com/Alamofire/Alamofire)
+
+* [PromiseKit](https://github.com/mxcl/PromiseKit)
+
+* [SnapKit](https://github.com/SnapKit/SnapKit)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[product-screenshot]: images/screenshot.png
