@@ -116,25 +116,25 @@ pod install
 
 ##  Used Technologies
 
-The used archeticture that I used in the project is MVVM, it can provide a juge flexibility, separate between models and views, apply the reactive programming by controling all the interactions and handling models in the ViewModels.
+### The used archeticture that I used in the project is MVVM, it can provide a juge flexibility, separate between models and views, apply the reactive programming by controling all the interactions and handling models in the ViewModels.
 
-Dependency Pattern:
+### Dependency Pattern:
 Dependency Injection pattern was used here to  manage the app shared Repositories and ViewModels.
 
-Design Pattern:
+### Design Pattern:
 Repository was used to provide a facade design pattern to help fetching data from the cloud service endpoints and to store the data on the local device storage.
 
-Reactive programming: 
+### Reactive programming: 
 Comine was the method used to apply it, I prefer to use Combine over other tools or third libraries is because it is provided by apple, it's applied on the level of foundation and UIKit, so anything you may use from those two Appld Kits will be supported, Apple has access to all public and private functions and attributes in their libraries, so it will be able to apply the reacitve with more powerful that any other third parties that will have linit access to Apple libraries' components.
 
-Asynchronous and handling results:
+### Asynchronous and handling results:
 Promise kit will shine up here, it can provide a lot of poweful options and possiblities, from chainig the requests, and get rid of the boiledcode that you need to wrote to handle the results, delegates and completion handles.
 
-Domain Layer:
+### Domain Layer:
 I created a domain layer, and specific data layer for each data source, for the RemoteAPI we used DTOs, for the UserDefaults persist storage, we used UDS.
 This approach will help you let the ViewModel only handle one Model, and any change that could affect the DTOs or UDS will not affect the ViewModel, because we have a mapping functions that should know how to apply and create Domain models from DTOs or UDSs.
 
-ViewModel Abstraction:
+### ViewModel Abstraction:
 When we abstract the ViewModel, we can use different implementation of the same ViewModel, and we can use that later on with UnitTesting the ViewModel by creating Mock data implementation and test the needed cases and scenarios.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
